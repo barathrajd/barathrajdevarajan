@@ -1,0 +1,16 @@
+@unocss preflights;
+@unocss default;
+
+body {
+    width: 99svw;
+    height: 99svh;
+    width: 99vw;
+    height: 99vh;
+    background: black;
+    color: white;
+}
+
+#root {
+    width: 99%;
+    height: 99%;
+}
