@@ -32,36 +32,36 @@ body {
     /* Zinc-900 base with Zinc-50 foreground */
     --background: 9 9 11;
     --foreground: 250 250 250;
-    
+
     /* Zinc-800 for cards/popovers */
     --card: 9 9 11;
     --card-foreground: 250 250 250;
     --popover: 9 9 11;
     --popover-foreground: 250 250 250;
-    
+
     /* Primary: Purple-500 */
     --primary: 124 58 237;
     --primary-foreground: 248 250 252;
-    
+
     /* Secondary: Zinc-800 */
     --secondary: 39 39 42;
     --secondary-foreground: 250 250 250;
-    
+
     /* Muted: Zinc-800 */
     --muted: 39 39 42;
     --muted-foreground: 161 161 170;
-    
+
     /* Accent: Zinc-800 */
     --accent: 39 39 42;
     --accent-foreground: 250 250 250;
-    
+
     --destructive: 127 29 29;
     --destructive-foreground: 250 250 250;
-    
+
     --border: 39 39 42;
     --input: 39 39 42;
     --ring: 212 212 216;
-    
+
     --radius: 0.5rem;
   }
 }
@@ -70,7 +70,8 @@ body {
   * {
     @apply border-border;
   }
-  html, body {
+  html,
+  body {
     @apply bg-background text-foreground;
   }
 }

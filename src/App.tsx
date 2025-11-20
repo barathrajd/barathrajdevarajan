@@ -1,11 +1,15 @@
-import { lazy, Suspense } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Layout } from "@/components/Layout";
+import { Layout } from '@/components/Layout';
+import { Suspense, lazy } from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 
 // Lazy load page components
-const HomePage = lazy(() => import("@/pages/Home").then(module => ({ default: module.HomePage })));
-const BlogPage = lazy(() => import("@/pages/Blog").then(module => ({ default: module.BlogPage })));
+const HomePage = lazy(() =>
+  import('@/pages/Home').then((module) => ({ default: module.HomePage })),
+);
+const BlogPage = lazy(() =>
+  import('@/pages/Blog').then((module) => ({ default: module.BlogPage })),
+);
 
 // Loading component
 const PageLoader = () => (

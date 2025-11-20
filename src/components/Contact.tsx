@@ -1,6 +1,6 @@
-import { Github, Mail } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { ContactLink } from "@/types/portfolio";
+import { Button } from '@/components/ui/button';
+import type { ContactLink } from '@/types/portfolio';
+import { Github, Mail } from 'lucide-react';
 
 interface ContactProps {
   contact: ContactLink[];
@@ -31,20 +31,20 @@ export const Contact = ({ contact }: ContactProps) => {
           {contact.map((link) => {
             const Icon = getIcon(link.type);
             return (
-              <Button 
-                key={link.type} 
-                variant="outline" 
-                size="lg" 
+              <Button
+                key={link.type}
+                variant="outline"
+                size="lg"
                 asChild
                 className="border-border/50 hover:border-primary hover:bg-primary/10 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20"
               >
-                <a 
-                  href={link.url} 
-                  target={link.type === 'github' ? '_blank' : undefined} 
+                <a
+                  href={link.url}
+                  target={link.type === 'github' ? '_blank' : undefined}
                   rel={link.type === 'github' ? 'noreferrer' : undefined}
                   className="flex items-center justify-center gap-2"
                 >
-                  <Icon className="h-5 w-5" /> 
+                  <Icon className="h-5 w-5" />
                   <span className="font-medium">{link.label}</span>
                 </a>
               </Button>

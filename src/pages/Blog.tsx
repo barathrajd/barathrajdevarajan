@@ -1,4 +1,4 @@
-import { GradientText } from "@/components/ui/gradient-text";
+import { GradientText } from '@/components/ui/gradient-text';
 
 export const BlogPage = () => {
   return (
@@ -11,8 +11,9 @@ export const BlogPage = () => {
           Coming Soon
         </p>
         <p className="text-lg text-muted-foreground/80">
-          I'm currently working on bringing you insightful articles about frontend development, 
-          build tools, and modern web technologies. Stay tuned!
+          I'm currently working on bringing you insightful articles about
+          frontend development, build tools, and modern web technologies. Stay
+          tuned!
         </p>
       </div>
     </div>

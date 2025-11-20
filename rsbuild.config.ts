@@ -9,16 +9,28 @@ export default defineConfig({
     title: 'Barathraj Devarajan | Portfolio',
     meta: {
       viewport: 'width=device-width, initial-scale=1.0',
-      description: 'Frontend developer specializing in React, TypeScript, codemods, payment integrations, and developer tools. Explore my projects and experience.',
+      description:
+        'Frontend developer specializing in React, TypeScript, codemods, payment integrations, and developer tools. Explore my projects and experience.',
       'theme-color': '#8b5cf6',
       // Open Graph tags for social sharing
       'og:title': 'Barathraj Devarajan | Portfolio',
-      'og:description': 'Frontend developer specializing in React, TypeScript, and developer tools',
+      'og:description':
+        'Frontend developer specializing in React, TypeScript, and developer tools',
       'og:type': 'website',
     },
     tags: [
-      { tag: 'meta', attrs: { name: 'author', content: 'Barathraj Devarajan' } },
-      { tag: 'meta', attrs: { name: 'keywords', content: 'React, TypeScript, Frontend Developer, Codemods, Payment Integration, React Native' } },
+      {
+        tag: 'meta',
+        attrs: { name: 'author', content: 'Barathraj Devarajan' },
+      },
+      {
+        tag: 'meta',
+        attrs: {
+          name: 'keywords',
+          content:
+            'React, TypeScript, Frontend Developer, Codemods, Payment Integration, React Native',
+        },
+      },
     ],
   },
   performance: {
@@ -37,8 +49,6 @@ export default defineConfig({
       root: 'dist',
     },
     cleanDistPath: true,
-    copy: [
-      { from: 'public' }
-    ],
+    copy: [{ from: 'public' }],
   },
 });
