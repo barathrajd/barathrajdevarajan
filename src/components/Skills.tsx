@@ -15,35 +15,43 @@ const iconMap: Record<string, LucideIcon> = {
 
 export const Skills = ({ skills }: SkillsProps) => {
   return (
-    <section className="py-20 px-4 bg-muted/30">
+    <section className="py-20 px-4 bg-background">
       <div className="container mx-auto max-w-7xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-12 flex items-center gap-3">
           <span>Tech Stack</span>
           <div className="h-px bg-border/50 flex-1 ml-4"></div>
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {skills.map((category, index) => {
             const Icon = iconMap[category.icon] || Code2;
-            const colorClass = index === 0 ? "text-primary" : 
-                              index === 1 ? "text-secondary" : 
-                              index === 2 ? "text-accent" : "text-primary";
+            const colorClass = index === 0 ? "text-blue-400" : 
+                              index === 1 ? "text-purple-400" : 
+                              index === 2 ? "text-green-400" : "text-orange-400";
             
             return (
-              <Card key={category.title} className="border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10">
+              <Card key={category.title} className="border-border/30 bg-card/20 backdrop-blur-sm hover:border-primary/30 transition-all duration-300 hover:shadow-lg hover:shadow-primary/5 group">
                 <CardHeader className="pb-4">
-                  <CardTitle className="flex items-center gap-2 text-lg">
-                    <Icon className={`h-5 w-5 ${colorClass}`} /> {category.title}
+                  <CardTitle className="flex items-center gap-3 text-xl">
+                    <div className={`p-2 rounded-lg bg-background/50 border border-border/50 group-hover:border-primary/20 transition-colors`}>
+                      <Icon className={`h-6 w-6 ${colorClass}`} />
+                    </div>
+                    {category.title}
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="pt-0">
-                  <ul className="space-y-2.5 text-sm text-muted-foreground">
+                <CardContent className="pt-2">
+                  <div className="flex flex-wrap gap-2">
                     {category.skills.map((skill) => (
-                      <li key={skill} className="flex items-center gap-2">
-                        <span className="h-1.5 w-1.5 rounded-full bg-primary/60"></span>
-                        {skill}
-                      </li>
+                      <a 
+                        key={skill.name} 
+                        href={skill.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="px-3 py-1.5 text-sm rounded-md bg-secondary/50 border border-border/50 text-muted-foreground hover:text-foreground hover:border-primary/30 hover:bg-secondary transition-all duration-300 cursor-pointer no-underline"
+                      >
+                        {skill.name}
+                      </a>
                     ))}
-                  </ul>
+                  </div>
                 </CardContent>
               </Card>
             );

@@ -5,32 +5,73 @@ export const portfolioData: PortfolioData = {
     name: "Barathraj",
     tagline: "Building scalable frontend systems & developer tools.",
     about: [
-      "Specialized in building custom tools, SDKs, and scalable frontend architectures that save development time and boost team productivity",
-      "Expert in modern build tools (Rspack, Webpack, Vite) and microfrontend systems, delivering optimized solutions for complex projects",
-      "Proven track record designing multi-client frontend delivery strategies and contributing to monorepos with reusable components",
-      "Fast turnaround, clean code, and seamless collaboration — let's build something amazing together!"
+      "Experienced in developing codemods and TypeScript SDKs that streamline development workflows and improve code quality",
+      "Built payment integrations handling real-world transaction flows with a focus on reliability and security",
+      "Passionate about solving frontend challenges on Frontend Mentor, continuously improving UI/UX implementation skills",
+      "Specialized in modern frontend architectures, React Native mobile development, build tools, and creating developer-friendly tooling"
     ]
   },
   skills: [
     {
       title: "Frontend",
       icon: "Code2",
-      skills: ["React.js", "Next.js", "Microfrontends", "Shadcn/UI"]
-    },
-    {
-      title: "Backend",
-      icon: "Database",
-      skills: ["Node.js", "Express.js", "Deno"]
+      skills: [
+        { name: "React.js", url: "https://react.dev" },
+        { name: "React Native", url: "https://reactnative.dev" },
+        { name: "Next.js", url: "https://nextjs.org" },
+        { name: "TypeScript", url: "https://www.typescriptlang.org" },
+        { name: "Redux", url: "https://redux.js.org" },
+        { name: "Zustand", url: "https://zustand-demo.pmnd.rs" }
+      ]
     },
     {
       title: "Build Tools",
-      icon: "Wrench",
-      skills: ["Rspack", "Webpack", "Nx", "Vite"]
+      icon: "Terminal",
+      skills: [
+        { name: "Rspack", url: "https://rspack.dev" },
+        { name: "Rsbuild", url: "https://rsbuild.dev" },
+        { name: "Rslib", url: "https://github.com/web-infra-dev/rslib" },
+        { name: "Module Federation", url: "https://module-federation.io" },
+        { name: "Webpack", url: "https://webpack.js.org" },
+        { name: "Vite", url: "https://vitejs.dev" },
+        { name: "Rollup", url: "https://rollupjs.org" },
+        { name: "tsup", url: "https://tsup.egoist.dev" },
+        { name: "Nx", url: "https://nx.dev" },
+        { name: "Turborepo", url: "https://turbo.build" },
+        { name: "pnpm", url: "https://pnpm.io" }
+      ]
     },
     {
-      title: "Languages",
-      icon: "Terminal",
-      skills: ["JavaScript (In-depth)", "TypeScript", "Rust (Learning)"]
+      title: "UI Libraries",
+      icon: "Wrench",
+      skills: [
+        { name: "Shadcn/UI", url: "https://ui.shadcn.com" },
+        { name: "Material UI", url: "https://mui.com" },
+        { name: "Bootstrap", url: "https://getbootstrap.com" },
+        { name: "Core UI", url: "https://coreui.io" },
+        { name: "Tailwind CSS", url: "https://tailwindcss.com" }
+      ]
+    },
+    {
+      title: "Testing & Quality",
+      icon: "Database",
+      skills: [
+        { name: "Jest", url: "https://jestjs.io" },
+        { name: "Vitest", url: "https://vitest.dev" },
+        { name: "Biome", url: "https://biomejs.dev" },
+        { name: "ESLint", url: "https://eslint.org" },
+        { name: "Prettier", url: "https://prettier.io" }
+      ]
+    },
+    {
+      title: "Backend & Integrations",
+      icon: "Database",
+      skills: [
+        { name: "Node.js", url: "https://nodejs.org" },
+        { name: "Express.js", url: "https://expressjs.com" },
+        { name: "Payment APIs", url: "https://stripe.com/docs/api" }, // Generic link or specific if known
+        { name: "REST APIs", url: "https://restfulapi.net" } // Generic link
+      ]
     }
   ],
   projects: [
@@ -59,6 +100,11 @@ export const portfolioData: PortfolioData = {
       type: "github",
       label: "GitHub",
       url: "https://github.com/barathrajd"
+    },
+    {
+      type: "website",
+      label: "Frontend Mentor",
+      url: "https://www.frontendmentor.io/profile/barathrajd"
     }
   ]
 };

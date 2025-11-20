@@ -4,10 +4,15 @@ export interface PersonalInfo {
   about: string[];
 }
 
+export interface Skill {
+  name: string;
+  url: string;
+}
+
 export interface SkillCategory {
   title: string;
   icon: string;
-  skills: string[];
+  skills: Skill[];
 }
 
 export interface Project {
@@ -19,7 +24,7 @@ export interface Project {
 }
 
 export interface ContactLink {
-  type: 'email' | 'github';
+  type: 'email' | 'github' | 'website';
   label: string;
   url: string;
 }

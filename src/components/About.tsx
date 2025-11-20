@@ -10,13 +10,13 @@ const icons = [Rocket, Zap, Target, Briefcase, Sparkles];
 
 export const About = ({ personal }: AboutProps) => {
   return (
-    <section className="py-20 px-4 bg-muted/30">
+    <section className="py-20 px-4 bg-background">
       <div className="container mx-auto max-w-7xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-12 flex items-center gap-3">
           <span>About Me</span>
           <div className="h-px bg-border/50 flex-1 ml-4"></div>
         </h2>
-        <Card className="border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10">
+        <Card className="border-border/30 bg-card/20 backdrop-blur-sm hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10">
           <CardContent className="p-8 md:p-10">
             <ul className="space-y-4">
               {personal.about.map((point, index) => {

@@ -10,7 +10,7 @@ interface ProjectsProps {
 
 export const Projects = ({ projects }: ProjectsProps) => {
   return (
-    <section className="py-20 px-4">
+    <section className="py-20 px-4 bg-background">
       <div className="container mx-auto max-w-7xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-12 flex items-center gap-3">
           <span>Featured Projects</span>
@@ -20,7 +20,7 @@ export const Projects = ({ projects }: ProjectsProps) => {
           {projects.map((project) => (
             <Card 
               key={project.title} 
-              className="flex flex-col h-full border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10 group"
+              className="flex flex-col h-full border-border/30 bg-card/20 backdrop-blur-sm hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10 group"
             >
               <CardHeader className="pb-3">
                 <CardTitle className="text-xl group-hover:text-primary transition-colors">{project.title}</CardTitle>
@@ -32,7 +32,7 @@ export const Projects = ({ projects }: ProjectsProps) => {
                 </p>
                 <div className="flex flex-wrap gap-2">
                   {project.tags.map((tag) => (
-                    <Badge key={tag} variant="secondary" className="bg-primary/10 text-primary hover:bg-primary/20">
+                    <Badge key={tag} variant="outline">
                       {tag}
                     </Badge>
                   ))}
