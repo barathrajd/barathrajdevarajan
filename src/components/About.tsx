@@ -1,12 +1,18 @@
 import { Card, CardContent } from '@/components/ui/card';
 import type { PersonalInfo } from '@/types/portfolio';
-import { Briefcase, Rocket, Sparkles, Target, Zap } from 'lucide-react';
+import {
+  FaBolt,
+  FaBriefcase,
+  FaBullseye,
+  FaRocket,
+  FaWandMagicSparkles,
+} from 'react-icons/fa6';
 
 interface AboutProps {
   personal: PersonalInfo;
 }
 
-const icons = [Rocket, Zap, Target, Briefcase, Sparkles];
+const icons = [FaRocket, FaBolt, FaBullseye, FaBriefcase, FaWandMagicSparkles];
 
 export const About = ({ personal }: AboutProps) => {
   return (
@@ -16,14 +22,14 @@ export const About = ({ personal }: AboutProps) => {
           <span>About Me</span>
           <div className="h-px bg-border/50 flex-1 ml-4" />
         </h2>
-        <Card className="border-border/30 bg-card/20 backdrop-blur-sm hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10">
+        <Card className="border-border/80 bg-card/20 backdrop-blur-sm hover:border-primary transition-all duration-300 hover:shadow-lg hover:shadow-primary/10">
           <CardContent className="p-8 md:p-10">
             <ul className="space-y-4">
               {personal.about.map((point, index) => {
-                const Icon = icons[index] || Rocket;
+                const Icon = icons[index] || FaRocket;
                 return (
                   <li
-                    key={index}
+                    key={point}
                     className="text-lg text-foreground leading-relaxed flex items-start gap-3"
                   >
                     <Icon className="h-5 w-5 text-primary mt-1 flex-shrink-0" />

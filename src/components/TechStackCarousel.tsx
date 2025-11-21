@@ -1,4 +1,4 @@
-import { FaBolt, FaCube, FaDatabase, FaLayerGroup } from 'react-icons/fa';
+import { FaBolt, FaCube, FaLayerGroup } from 'react-icons/fa';
 import {
   SiBiome,
   SiBootstrap,
@@ -27,11 +27,12 @@ import {
   SiWebpack,
 } from 'react-icons/si';
 
+import moduleFederationLogo from '../assets/module-federation-logo.png';
 import rsbuildLogo from '../assets/rsbuild-logo.svg';
 import rslibLogo from '../assets/rslib-logo.svg';
 // Import assets
 import rspackLogo from '../assets/rspack-logo.svg';
-// import moduleFederationLogo from '../assets/module-federation-logo.png';
+import zustandLogo from '../assets/zustand-logo.ico';
 
 export const TechStackCarousel = () => {
   const techStack = [
@@ -80,7 +81,12 @@ export const TechStackCarousel = () => {
       color: '#FFFFFF',
       url: 'https://nextjs.org',
     },
-    // { name: 'Module Federation', Asset: moduleFederationLogo, color: '#0C2545', url: 'https://module-federation.io' },
+    {
+      name: 'Module Federation',
+      Asset: moduleFederationLogo,
+      color: '#0C2545',
+      url: 'https://module-federation.io',
+    },
     {
       name: 'Bootstrap',
       Icon: SiBootstrap,
@@ -96,13 +102,13 @@ export const TechStackCarousel = () => {
     {
       name: 'Shadcn/UI',
       Icon: SiShadcnui,
-      color: '#000000',
+      color: '#FFFFFF',
       url: 'https://ui.shadcn.com',
     },
     {
       name: 'Core UI',
       Icon: FaLayerGroup,
-      color: '#000000',
+      color: '#FFFFFF',
       url: 'https://coreui.io',
     },
 
@@ -115,7 +121,7 @@ export const TechStackCarousel = () => {
     },
     {
       name: 'Zustand',
-      Icon: FaDatabase,
+      Asset: zustandLogo,
       color: '#443E38',
       url: 'https://zustand-demo.pmnd.rs',
     },
@@ -237,13 +243,7 @@ export const TechStackCarousel = () => {
               rel="noopener noreferrer"
               className="flex-shrink-0 flex flex-col items-center gap-2 group cursor-pointer no-underline"
             >
-              <div
-                className={`w-12 h-12 md:w-14 md:h-14 rounded-lg flex items-center justify-center transition-all duration-300 group-hover:scale-110 ${
-                  tech.name === 'Module Federation'
-                    ? 'bg-white/90 p-1'
-                    : 'bg-transparent border border-border/30 group-hover:border-primary/50 group-hover:bg-card/80'
-                }`}
-              >
+              <div className="w-12 h-12 md:w-14 md:h-14 rounded-lg flex items-center justify-center transition-all duration-300 group-hover:scale-110 bg-transparent border border-border/10 group-hover:border-primary/20 group-hover:bg-card/40">
                 {tech.Icon ? (
                   <tech.Icon
                     className="w-7 h-7 md:w-8 md:h-8 transition-all duration-300 opacity-70 group-hover:opacity-100"
@@ -253,7 +253,11 @@ export const TechStackCarousel = () => {
                   <img
                     src={tech.Asset}
                     alt={tech.name}
-                    className="w-full h-full object-contain transition-all duration-300 opacity-90 group-hover:opacity-100"
+                    className={`w-full h-full object-contain transition-all duration-300 opacity-90 group-hover:opacity-100 ${
+                      tech.name === 'Module Federation'
+                        ? 'brightness-0 invert'
+                        : ''
+                    }`}
                   />
                 )}
               </div>

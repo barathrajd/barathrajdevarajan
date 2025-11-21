@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button';
 import type { ContactLink } from '@/types/portfolio';
-import { Github, Mail } from 'lucide-react';
+import { FaEnvelope, FaGithub } from 'react-icons/fa6';
 
 interface ContactProps {
   contact: ContactLink[];
@@ -10,11 +10,11 @@ export const Contact = ({ contact }: ContactProps) => {
   const getIcon = (type: string) => {
     switch (type) {
       case 'email':
-        return Mail;
+        return FaEnvelope;
       case 'github':
-        return Github;
+        return FaGithub;
       default:
-        return Mail;
+        return FaEnvelope;
     }
   };
 

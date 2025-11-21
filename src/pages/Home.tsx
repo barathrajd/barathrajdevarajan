@@ -3,7 +3,6 @@ import { Contact } from '@/components/Contact';
 import { Hero } from '@/components/Hero';
 import { Projects } from '@/components/Projects';
 import { Skills } from '@/components/Skills';
-import { Separator } from '@/components/ui/separator';
 import { portfolioData } from '@/data/portfolio';
 import { useEffect } from 'react';
 
@@ -15,7 +14,7 @@ export const HomePage = () => {
     };
 
     const handleIntersect = (entries: IntersectionObserverEntry[]) => {
-      entries.forEach((entry) => {
+      for (const entry of entries) {
         if (entry.isIntersecting) {
           const id = entry.target.id;
           const titleMap: Record<string, string> = {
@@ -29,16 +28,16 @@ export const HomePage = () => {
             document.title = titleMap[id];
           }
         }
-      });
+      }
     };
 
     const observer = new IntersectionObserver(handleIntersect, observerOptions);
 
     // Observe all sections
-    ['about', 'skills', 'projects', 'contact'].forEach((id) => {
+    for (const id of ['about', 'skills', 'projects', 'contact']) {
       const element = document.getElementById(id);
       if (element) observer.observe(element);
-    });
+    }
 
     // Handle scroll to top (Hero section)
     const handleScroll = () => {

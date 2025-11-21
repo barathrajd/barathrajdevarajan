@@ -1,7 +1,8 @@
 import favicon from '@/assets/favicon.svg';
 import { Button } from '@/components/ui/button';
-import { Github, Linkedin, X } from 'lucide-react';
 import { useState } from 'react';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { MdClose, MdMenu } from 'react-icons/md';
 import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 
 export const Navbar = () => {
@@ -46,6 +47,7 @@ export const Navbar = () => {
     <nav className="fixed top-0 w-full border-b bg-background z-50">
       <div className="container flex h-16 items-center justify-between px-4 md:px-8">
         <button
+          type="button"
           onClick={handleLogoClick}
           className="hover:opacity-80 transition-opacity"
           aria-label="Home"
@@ -54,24 +56,28 @@ export const Navbar = () => {
         </button>
         <div className="hidden md:flex items-center gap-6">
           <button
+            type="button"
             onClick={() => handleNavClick('about')}
             className="text-sm font-medium hover:text-primary transition-colors"
           >
             About
           </button>
           <button
+            type="button"
             onClick={() => handleNavClick('skills')}
             className="text-sm font-medium hover:text-primary transition-colors"
           >
             Skills
           </button>
           <button
+            type="button"
             onClick={() => handleNavClick('projects')}
             className="text-sm font-medium hover:text-primary transition-colors"
           >
             Projects
           </button>
           <button
+            type="button"
             onClick={() => handleNavClick('contact')}
             className="text-sm font-medium hover:text-primary transition-colors"
           >
@@ -93,7 +99,7 @@ export const Navbar = () => {
                 rel="noreferrer"
                 aria-label="GitHub"
               >
-                <Github className="h-5 w-5" />
+                <FaGithub className="h-5 w-5" />
               </a>
             </Button>
             <Button variant="ghost" size="icon" asChild>
@@ -103,7 +109,7 @@ export const Navbar = () => {
                 rel="noreferrer"
                 aria-label="LinkedIn"
               >
-                <Linkedin className="h-5 w-5" />
+                <FaLinkedin className="h-5 w-5" />
               </a>
             </Button>
           </div>
@@ -115,22 +121,7 @@ export const Navbar = () => {
             onClick={() => setIsMobileMenuOpen(true)}
           >
             <span className="sr-only">Menu</span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="lucide lucide-menu"
-            >
-              <line x1="4" x2="20" y1="12" y2="12" />
-              <line x1="4" x2="20" y1="6" y2="6" />
-              <line x1="4" x2="20" y1="18" y2="18" />
-            </svg>
+            <MdMenu className="h-6 w-6" />
           </Button>
         </div>
       </div>
@@ -138,9 +129,11 @@ export const Navbar = () => {
       {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (
         <>
-          <div
-            className="fixed inset-0 bg-black/50 z-40 md:hidden"
+          <button
+            type="button"
+            className="fixed inset-0 bg-black/50 z-40 md:hidden w-full h-full cursor-default"
             onClick={() => setIsMobileMenuOpen(false)}
+            aria-label="Close menu"
           />
           <div className="fixed top-0 right-0 h-full w-[280px] bg-[#18181b] border-l border-border z-[60] md:hidden flex flex-col animate-in slide-in-from-right duration-300 shadow-2xl">
             <div className="flex items-center justify-between p-4 border-b">
@@ -150,29 +143,33 @@ export const Navbar = () => {
                 size="icon"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                <X className="h-5 w-5" />
+                <MdClose className="h-5 w-5" />
               </Button>
             </div>
             <div className="flex flex-col gap-2 p-4 flex-1">
               <button
+                type="button"
                 onClick={() => handleNavClick('about')}
                 className="text-left py-3 px-4 rounded-md hover:bg-accent transition-colors font-medium"
               >
                 About
               </button>
               <button
+                type="button"
                 onClick={() => handleNavClick('skills')}
                 className="text-left py-3 px-4 rounded-md hover:bg-accent transition-colors font-medium"
               >
                 Skills
               </button>
               <button
+                type="button"
                 onClick={() => handleNavClick('projects')}
                 className="text-left py-3 px-4 rounded-md hover:bg-accent transition-colors font-medium"
               >
                 Projects
               </button>
               <button
+                type="button"
                 onClick={() => handleNavClick('contact')}
                 className="text-left py-3 px-4 rounded-md hover:bg-accent transition-colors font-medium"
               >
@@ -199,7 +196,7 @@ export const Navbar = () => {
                     rel="noreferrer"
                     aria-label="GitHub"
                   >
-                    <Github className="h-5 w-5" />
+                    <FaGithub className="h-5 w-5" />
                   </a>
                 </Button>
                 <Button variant="outline" size="icon" asChild>
@@ -209,7 +206,7 @@ export const Navbar = () => {
                     rel="noreferrer"
                     aria-label="LinkedIn"
                   >
-                    <Linkedin className="h-5 w-5" />
+                    <FaLinkedin className="h-5 w-5" />
                   </a>
                 </Button>
               </div>

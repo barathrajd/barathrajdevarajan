@@ -1,22 +1,17 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import type { SkillCategory } from '@/types/portfolio';
-import {
-  Code2,
-  Database,
-  type LucideIcon,
-  Terminal,
-  Wrench,
-} from 'lucide-react';
+import type { IconType } from 'react-icons';
+import { FaCode, FaDatabase, FaTerminal, FaWrench } from 'react-icons/fa6';
 
 interface SkillsProps {
   skills: SkillCategory[];
 }
 
-const iconMap: Record<string, LucideIcon> = {
-  Code2,
-  Database,
-  Terminal,
-  Wrench,
+const iconMap: Record<string, IconType> = {
+  Code2: FaCode,
+  Database: FaDatabase,
+  Terminal: FaTerminal,
+  Wrench: FaWrench,
 };
 
 export const Skills = ({ skills }: SkillsProps) => {
@@ -29,7 +24,7 @@ export const Skills = ({ skills }: SkillsProps) => {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {skills.map((category, index) => {
-            const Icon = iconMap[category.icon] || Code2;
+            const Icon = iconMap[category.icon] || FaCode;
             const colorClass =
               index === 0
                 ? 'text-blue-400'
@@ -42,7 +37,7 @@ export const Skills = ({ skills }: SkillsProps) => {
             return (
               <Card
                 key={category.title}
-                className="border-border/30 bg-card/20 backdrop-blur-sm hover:border-primary/30 transition-all duration-300 hover:shadow-lg hover:shadow-primary/5 group"
+                className="border-border/80 bg-card/20 backdrop-blur-sm hover:border-primary transition-all duration-300 hover:shadow-lg hover:shadow-primary/5 group"
               >
                 <CardHeader className="pb-4">
                   <CardTitle className="flex items-center gap-3 text-xl">

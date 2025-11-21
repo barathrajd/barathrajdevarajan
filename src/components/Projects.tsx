@@ -9,7 +9,7 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import type { Project } from '@/types/portfolio';
-import { Github } from 'lucide-react';
+import { FaGithub } from 'react-icons/fa6';
 
 interface ProjectsProps {
   projects: Project[];
@@ -27,7 +27,7 @@ export const Projects = ({ projects }: ProjectsProps) => {
           {projects.map((project) => (
             <Card
               key={project.title}
-              className="flex flex-col h-full border-border/30 bg-card/20 backdrop-blur-sm hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10 group"
+              className="flex flex-col h-full border-border/80 bg-card/20 backdrop-blur-sm hover:border-primary transition-all duration-300 hover:shadow-xl hover:shadow-primary/10 group"
             >
               <CardHeader className="pb-3">
                 <CardTitle className="text-xl group-hover:text-primary transition-colors">
@@ -56,7 +56,7 @@ export const Projects = ({ projects }: ProjectsProps) => {
                   asChild
                 >
                   <a href={project.githubUrl} target="_blank" rel="noreferrer">
-                    <Github className="mr-2 h-4 w-4" /> View Code
+                    <FaGithub className="mr-2 h-4 w-4" /> View Code
                   </a>
                 </Button>
               </CardFooter>

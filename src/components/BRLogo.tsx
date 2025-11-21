@@ -11,6 +11,8 @@ export const BRLogo = ({ className }: BRLogoProps) => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={cn('w-10 h-10', className)}
+      aria-label="BR Logo"
+      role="img"
     >
       {/* Circular background with gradient */}
       <circle cx="24" cy="24" r="22" fill="url(#logo-gradient)" />

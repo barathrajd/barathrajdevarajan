@@ -2,7 +2,7 @@ import { TechStackCarousel } from '@/components/TechStackCarousel';
 import { Button } from '@/components/ui/button';
 import { GradientText } from '@/components/ui/gradient-text';
 import type { PersonalInfo } from '@/types/portfolio';
-import { ArrowRight, Mail } from 'lucide-react';
+import { FaArrowRight, FaEnvelope } from 'react-icons/fa6';
 
 interface HeroProps {
   personal: PersonalInfo;
@@ -39,7 +39,7 @@ export const Hero = ({ personal }: HeroProps) => {
               onClick={() => scrollToSection('projects')}
             >
               View My Work
-              <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+              <FaArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
             </Button>
             <Button
               variant="outline"
@@ -47,7 +47,7 @@ export const Hero = ({ personal }: HeroProps) => {
               className="min-w-[180px]"
               onClick={() => scrollToSection('contact')}
             >
-              <Mail className="mr-2 h-4 w-4" />
+              <FaEnvelope className="mr-2 h-4 w-4" />
               Get in Touch
             </Button>
           </div>
