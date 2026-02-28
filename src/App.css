@@ -1,7 +1,8 @@
 body {
   margin: 0;
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  font-display: swap;
+  font-family:
+    'Manrope',
+    sans-serif;
 }
 
 @tailwind base;
@@ -25,44 +26,81 @@ body {
   .animate-scroll:hover {
     animation-play-state: paused;
   }
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
 }
 
 @layer base {
   :root {
-    /* Zinc-900 base with Zinc-50 foreground */
-    --background: 9 9 11;
-    --foreground: 250 250 250;
+    --background: 243 248 237;
+    --foreground: 46 67 36;
 
-    /* Zinc-800 for cards/popovers */
-    --card: 9 9 11;
-    --card-foreground: 250 250 250;
-    --popover: 9 9 11;
-    --popover-foreground: 250 250 250;
+    --card: 255 255 255;
+    --card-foreground: 46 67 36;
+    --popover: 255 255 255;
+    --popover-foreground: 46 67 36;
 
-    /* Primary: Purple-500 */
-    --primary: 124 58 237;
-    --primary-foreground: 248 250 252;
+    --primary: 154 201 120;
+    --primary-foreground: 22 36 15;
 
-    /* Secondary: Zinc-800 */
-    --secondary: 39 39 42;
-    --secondary-foreground: 250 250 250;
+    --secondary: 227 240 215;
+    --secondary-foreground: 46 67 36;
 
-    /* Muted: Zinc-800 */
-    --muted: 39 39 42;
-    --muted-foreground: 161 161 170;
+    --muted: 200 226 180;
+    --muted-foreground: 61 97 42;
 
-    /* Accent: Zinc-800 */
-    --accent: 39 39 42;
-    --accent-foreground: 250 250 250;
+    --accent: 133 186 97;
+    --accent-foreground: 46 67 36;
 
     --destructive: 127 29 29;
-    --destructive-foreground: 250 250 250;
+    --destructive-foreground: 248 248 248;
 
-    --border: 39 39 42;
-    --input: 39 39 42;
-    --ring: 212 212 216;
+    --border: 200 226 180;
+    --input: 200 226 180;
+    --ring: 154 201 120;
 
-    --radius: 0.5rem;
+    --radius: 0.85rem;
+  }
+
+  .dark {
+    --background: 16 26 13;
+    --foreground: 221 232 211;
+
+    --card: 25 38 20;
+    --card-foreground: 221 232 211;
+    --popover: 25 38 20;
+    --popover-foreground: 221 232 211;
+
+    --primary: 154 201 120;
+    --primary-foreground: 22 36 15;
+
+    --secondary: 34 52 27;
+    --secondary-foreground: 221 232 211;
+
+    --muted: 30 45 24;
+    --muted-foreground: 171 192 156;
+
+    --accent: 46 71 35;
+    --accent-foreground: 221 232 211;
+
+    --destructive: 127 29 29;
+    --destructive-foreground: 248 248 248;
+
+    --border: 54 82 42;
+    --input: 54 82 42;
+    --ring: 133 186 97;
   }
 }
 
@@ -73,6 +111,47 @@ body {
   html,
   body {
     @apply bg-background text-foreground;
+  }
+
+  body {
+    background-image:
+      radial-gradient(
+        circle at 12% 12%,
+        rgba(154, 201, 120, 0.2),
+        transparent 40%
+      ),
+      radial-gradient(
+        circle at 88% 4%,
+        rgba(134, 188, 102, 0.16),
+        transparent 38%
+      ),
+      linear-gradient(145deg, rgb(var(--background)), rgb(var(--background)));
+    background-attachment: fixed;
+  }
+
+  .dark body {
+    background-image:
+      radial-gradient(
+        circle at 12% 10%,
+        rgba(154, 201, 120, 0.08),
+        transparent 42%
+      ),
+      radial-gradient(
+        circle at 88% 2%,
+        rgba(103, 159, 67, 0.07),
+        transparent 40%
+      ),
+      linear-gradient(160deg, rgb(16, 26, 13), rgb(14, 21, 12));
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Manrope', sans-serif;
+    letter-spacing: -0.02em;
   }
 }
 

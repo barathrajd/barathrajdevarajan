@@ -2,7 +2,7 @@ import { FaBolt, FaCube, FaLayerGroup } from 'react-icons/fa';
 import {
   SiBiome,
   SiBootstrap,
-  SiCss3,
+  SiCss,
   SiEslint,
   SiExpress,
   SiGit,
@@ -25,16 +25,23 @@ import {
   SiVite,
   SiVitest,
   SiWebpack,
-} from 'react-icons/si';
+} from '@icons-pack/react-simple-icons';
 
-import moduleFederationLogo from '../assets/module-federation-logo.png';
+import moduleFederationLogo from '../assets/module-federation-logo-64.png';
 import rsbuildLogo from '../assets/rsbuild-logo.svg';
 import rslibLogo from '../assets/rslib-logo.svg';
 // Import assets
 import rspackLogo from '../assets/rspack-logo.svg';
-import zustandLogo from '../assets/zustand-logo.ico';
+import zustandLogo from '../assets/zustand-logo-64.png';
 
 export const TechStackCarousel = () => {
+  const useForegroundColor = new Set([
+    'Next.js',
+    'Shadcn/UI',
+    'Core UI',
+    'Express',
+  ]);
+
   const techStack = [
     // Languages
     {
@@ -57,7 +64,7 @@ export const TechStackCarousel = () => {
     },
     {
       name: 'CSS3',
-      Icon: SiCss3,
+      Icon: SiCss,
       color: '#1572B6',
       url: 'https://developer.mozilla.org/en-US/docs/Web/CSS',
     },
@@ -78,7 +85,7 @@ export const TechStackCarousel = () => {
     {
       name: 'Next.js',
       Icon: SiNextdotjs,
-      color: '#FFFFFF',
+      color: 'rgb(var(--foreground))',
       url: 'https://nextjs.org',
     },
     {
@@ -102,13 +109,13 @@ export const TechStackCarousel = () => {
     {
       name: 'Shadcn/UI',
       Icon: SiShadcnui,
-      color: '#FFFFFF',
+      color: 'rgb(var(--foreground))',
       url: 'https://ui.shadcn.com',
     },
     {
       name: 'Core UI',
       Icon: FaLayerGroup,
-      color: '#FFFFFF',
+      color: 'rgb(var(--foreground))',
       url: 'https://coreui.io',
     },
 
@@ -136,7 +143,7 @@ export const TechStackCarousel = () => {
     {
       name: 'Express',
       Icon: SiExpress,
-      color: '#FFFFFF',
+      color: 'rgb(var(--foreground))',
       url: 'https://expressjs.com',
     },
 
@@ -228,7 +235,7 @@ export const TechStackCarousel = () => {
   const duplicatedStack = [...techStack, ...techStack];
 
   return (
-    <div className="w-full overflow-hidden py-8 relative">
+    <div className="w-full overflow-hidden py-8 relative h-[152px]">
       {/* Gradient Masks */}
       <div className="absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
       <div className="absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
@@ -243,25 +250,37 @@ export const TechStackCarousel = () => {
               rel="noopener noreferrer"
               className="flex-shrink-0 flex flex-col items-center gap-2 group cursor-pointer no-underline"
             >
-              <div className="w-12 h-12 md:w-14 md:h-14 rounded-lg flex items-center justify-center transition-all duration-300 group-hover:scale-110 bg-transparent border border-border/10 group-hover:border-primary/20 group-hover:bg-card/40">
+              <div className="w-12 h-12 md:w-14 md:h-14 rounded-lg flex items-center justify-center transition-all duration-300 group-hover:scale-110 bg-card/65 border border-border/50 group-hover:border-primary/30 group-hover:bg-card">
                 {tech.Icon ? (
                   <tech.Icon
-                    className="w-7 h-7 md:w-8 md:h-8 transition-all duration-300 opacity-70 group-hover:opacity-100"
-                    style={{ color: tech.color }}
+                    className={`w-7 h-7 md:w-8 md:h-8 transition-all duration-300 group-hover:scale-105 ${
+                      useForegroundColor.has(tech.name)
+                        ? 'text-foreground'
+                        : 'opacity-95 group-hover:opacity-100'
+                    }`}
+                    style={
+                      useForegroundColor.has(tech.name)
+                        ? undefined
+                        : { color: tech.color }
+                    }
                   />
                 ) : (
                   <img
                     src={tech.Asset}
                     alt={tech.name}
-                    className={`w-full h-full object-contain transition-all duration-300 opacity-90 group-hover:opacity-100 ${
+                    width={56}
+                    height={56}
+                    loading="lazy"
+                    decoding="async"
+                    className={`w-full h-full object-contain transition-all duration-300 opacity-95 group-hover:opacity-100 ${
                       tech.name === 'Module Federation'
-                        ? 'brightness-0 invert'
+                        ? 'dark:brightness-0 dark:invert'
                         : ''
                     }`}
                   />
                 )}
               </div>
-              <span className="text-xs text-muted-foreground whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity">
+              <span className="text-xs text-muted-foreground whitespace-nowrap opacity-70 group-hover:opacity-100 transition-opacity">
                 {tech.name}
               </span>
             </a>

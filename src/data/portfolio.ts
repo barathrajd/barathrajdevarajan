@@ -2,13 +2,16 @@ import type { PortfolioData } from '@/types/portfolio';
 
 export const portfolioData: PortfolioData = {
   personal: {
-    name: 'Barathraj',
-    tagline: 'Building scalable frontend systems & developer tools.',
+    name: 'Barathraj Devarajan',
+    tagline:
+      'Web Developer with 5+ years of experience building modern web applications and custom tools.',
     about: [
-      'Experienced in developing codemods and TypeScript SDKs that streamline development workflows and improve code quality',
-      'Built payment integrations handling real-world transaction flows with a focus on reliability and security',
-      'Passionate about solving frontend challenges on Frontend Mentor, continuously improving UI/UX implementation skills',
-      'Specialized in modern frontend architectures, React Native mobile development, build tools, and creating developer-friendly tooling',
+      'My core expertise is in React, Node.js, and Rspack, with a strong focus on building scalable systems that connect frontend and backend cleanly.',
+      'I build custom tools and SDKs for asset management, file uploads, and developer productivity workflows.',
+      'I design frontend platforms using microfrontends and shared component libraries for multi-client and multi-team development.',
+      'I optimize build and delivery pipelines using Rspack, Webpack, Nx, and Vite to reduce friction and improve release velocity.',
+      'I contribute to monorepos with reusable components, utility packages, and structured logging patterns.',
+      'I am currently deepening JavaScript fundamentals, improving DSA problem-solving, and exploring Rust with Axum.',
     ],
   },
   skills: [
@@ -17,11 +20,20 @@ export const portfolioData: PortfolioData = {
       icon: 'Code2',
       skills: [
         { name: 'React.js', url: 'https://react.dev' },
-        { name: 'React Native', url: 'https://reactnative.dev' },
         { name: 'Next.js', url: 'https://nextjs.org' },
-        { name: 'TypeScript', url: 'https://www.typescriptlang.org' },
-        { name: 'Redux', url: 'https://redux.js.org' },
-        { name: 'Zustand', url: 'https://zustand-demo.pmnd.rs' },
+        { name: 'Microfrontends', url: 'https://module-federation.io/' },
+        { name: 'Shadcn/UI', url: 'https://ui.shadcn.com' },
+        { name: 'Shared UI Libraries', url: 'https://storybook.js.org' },
+      ],
+    },
+    {
+      title: 'Backend',
+      icon: 'Database',
+      skills: [
+        { name: 'Node.js', url: 'https://nodejs.org' },
+        { name: 'Express.js', url: 'https://expressjs.com' },
+        { name: 'REST APIs', url: 'https://restfulapi.net' },
+        { name: 'Custom SDKs', url: 'https://github.com/barathrajd' },
       ],
     },
     {
@@ -29,48 +41,22 @@ export const portfolioData: PortfolioData = {
       icon: 'Terminal',
       skills: [
         { name: 'Rspack', url: 'https://rspack.dev' },
-        { name: 'Rsbuild', url: 'https://rsbuild.dev' },
-        { name: 'Rslib', url: 'https://github.com/web-infra-dev/rslib' },
-        { name: 'Module Federation', url: 'https://module-federation.io' },
         { name: 'Webpack', url: 'https://webpack.js.org' },
-        { name: 'Vite', url: 'https://vitejs.dev' },
-        { name: 'Rollup', url: 'https://rollupjs.org' },
-        { name: 'tsup', url: 'https://tsup.egoist.dev' },
         { name: 'Nx', url: 'https://nx.dev' },
-        { name: 'Turborepo', url: 'https://turbo.build' },
-        { name: 'pnpm', url: 'https://pnpm.io' },
+        { name: 'Vite', url: 'https://vitejs.dev' },
+        { name: 'CI/CD', url: 'https://docs.github.com/en/actions' },
       ],
     },
     {
-      title: 'UI Libraries',
+      title: 'Languages',
       icon: 'Wrench',
       skills: [
-        { name: 'Shadcn/UI', url: 'https://ui.shadcn.com' },
-        { name: 'Material UI', url: 'https://mui.com' },
-        { name: 'Bootstrap', url: 'https://getbootstrap.com' },
-        { name: 'Core UI', url: 'https://coreui.io' },
-        { name: 'Tailwind CSS', url: 'https://tailwindcss.com' },
-      ],
-    },
-    {
-      title: 'Testing & Quality',
-      icon: 'Database',
-      skills: [
-        { name: 'Jest', url: 'https://jestjs.io' },
-        { name: 'Vitest', url: 'https://vitest.dev' },
-        { name: 'Biome', url: 'https://biomejs.dev' },
-        { name: 'ESLint', url: 'https://eslint.org' },
-        { name: 'Prettier', url: 'https://prettier.io' },
-      ],
-    },
-    {
-      title: 'Backend & Integrations',
-      icon: 'Database',
-      skills: [
-        { name: 'Node.js', url: 'https://nodejs.org' },
-        { name: 'Express.js', url: 'https://expressjs.com' },
-        { name: 'Payment APIs', url: 'https://stripe.com/docs/api' }, // Generic link or specific if known
-        { name: 'REST APIs', url: 'https://restfulapi.net' }, // Generic link
+        {
+          name: 'JavaScript (Advanced)',
+          url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
+        },
+        { name: 'TypeScript', url: 'https://www.typescriptlang.org' },
+        { name: 'Rust (Learning)', url: 'https://www.rust-lang.org' },
       ],
     },
   ],
@@ -79,16 +65,16 @@ export const portfolioData: PortfolioData = {
       title: 'Books Management System',
       description: 'A platform to sell, buy, and request books.',
       longDescription:
-        'Features user authentication and future chat capabilities. Built with a focus on user interaction and book exchange.',
+        'Built to support book exchange workflows with user-focused interactions. Includes core management capabilities and planned chat features for richer buyer and requester communication.',
       tags: ['JavaScript', 'Node.js', 'MongoDB'],
       githubUrl: 'https://github.com/barathrajd/booksmanagementsystem',
     },
     {
       title: 'EveMa',
-      description: 'Event management software for data acquisition.',
+      description: 'Event data acquisition and communication platform.',
       longDescription:
-        'Facilitates visitor-exhibitor communication through data analytics. Helps convert leads into business targets.',
-      tags: ['Data Analytics', 'Event Tech', 'Software'],
+        'Software for event workflows that enables visitor and exhibitor communication, profile-based analytics, and follow-up optimization to convert high-intent leads into business outcomes.',
+      tags: ['React', 'Node.js', 'Express', 'Data Analytics'],
       githubUrl: 'https://github.com/Evema-event/EveMa',
     },
   ],
@@ -105,8 +91,8 @@ export const portfolioData: PortfolioData = {
     },
     {
       type: 'website',
-      label: 'Frontend Mentor',
-      url: 'https://www.frontendmentor.io/profile/barathrajd',
+      label: 'LinkedIn',
+      url: 'https://linkedin.com/in/barathrajd',
     },
   ],
 };

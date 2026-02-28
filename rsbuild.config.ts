@@ -34,15 +34,15 @@ export default defineConfig({
     ],
   },
   performance: {
+    // Keep default strategy explicit and split heavy visual modules into async chunks.
     chunkSplit: {
       strategy: 'split-by-experience',
+      forceSplitting: {
+        homeCarousel: /[\\/]src[\\/]components[\\/]TechStackCarousel\.tsx$/,
+      },
     },
-    preload: {
-      type: 'all-chunks',
-    },
-    prefetch: {
-      type: 'all-chunks',
-    },
+    // Rsbuild docs default to async-chunks when true.
+    preload: true,
   },
   output: {
     distPath: {
