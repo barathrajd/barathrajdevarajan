@@ -1,5 +1,7 @@
 import { About } from '@/components/About';
 import { Contact } from '@/components/Contact';
+import { Education } from '@/components/Education';
+import { Experience } from '@/components/Experience';
 import { Hero } from '@/components/Hero';
 import { Projects } from '@/components/Projects';
 import { Skills } from '@/components/Skills';
@@ -19,6 +21,8 @@ export const HomePage = () => {
           const id = entry.target.id;
           const titleMap: Record<string, string> = {
             about: 'About | Barathraj',
+            experience: 'Experience | Barathraj',
+            education: 'Education | Barathraj',
             skills: 'Skills | Barathraj',
             projects: 'Projects | Barathraj',
             contact: 'Contact | Barathraj',
@@ -34,7 +38,14 @@ export const HomePage = () => {
     const observer = new IntersectionObserver(handleIntersect, observerOptions);
 
     // Observe all sections
-    for (const id of ['about', 'skills', 'projects', 'contact']) {
+    for (const id of [
+      'about',
+      'experience',
+      'education',
+      'skills',
+      'projects',
+      'contact',
+    ]) {
       const element = document.getElementById(id);
       if (element) observer.observe(element);
     }
@@ -60,6 +71,14 @@ export const HomePage = () => {
 
       <section id="about" className="scroll-mt-20">
         <About personal={portfolioData.personal} />
+      </section>
+
+      <section id="experience" className="scroll-mt-20">
+        <Experience experience={portfolioData.experience} />
+      </section>
+
+      <section id="education" className="scroll-mt-20">
+        <Education education={portfolioData.education} />
       </section>
 
       <section id="skills" className="scroll-mt-20">

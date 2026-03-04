@@ -59,7 +59,7 @@ export const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-0 w-full border-b border-border/60 bg-background/85 backdrop-blur-xl z-50">
+    <nav className="fixed top-0 w-full border-b border-border/60 dark:border-white/5 bg-background/85 dark:bg-background/60 backdrop-blur-xl z-50">
       <div className="container flex h-16 items-center justify-between px-4 md:px-8">
         <div className="flex items-center">
           <button
@@ -80,6 +80,20 @@ export const Navbar = () => {
             className="text-sm font-medium hover:text-primary transition-colors"
           >
             About
+          </button>
+          <button
+            type="button"
+            onClick={() => handleNavClick('experience')}
+            className="text-sm font-medium hover:text-primary transition-colors"
+          >
+            Experience
+          </button>
+          <button
+            type="button"
+            onClick={() => handleNavClick('education')}
+            className="text-sm font-medium hover:text-primary transition-colors"
+          >
+            Education
           </button>
           <button
             type="button"
@@ -177,6 +191,20 @@ export const Navbar = () => {
               className="text-left py-3 px-4 rounded-md hover:bg-accent transition-colors font-medium"
             >
               About
+            </button>
+            <button
+              type="button"
+              onClick={() => handleNavClick('experience')}
+              className="text-left py-3 px-4 rounded-md hover:bg-accent transition-colors font-medium"
+            >
+              Experience
+            </button>
+            <button
+              type="button"
+              onClick={() => handleNavClick('education')}
+              className="text-left py-3 px-4 rounded-md hover:bg-accent transition-colors font-medium"
+            >
+              Education
             </button>
             <button
               type="button"

@@ -1,8 +1,6 @@
 body {
   margin: 0;
-  font-family:
-    'Manrope',
-    sans-serif;
+  font-family: "Manrope", sans-serif;
 }
 
 @tailwind base;
@@ -75,32 +73,32 @@ body {
   }
 
   .dark {
-    --background: 16 26 13;
-    --foreground: 221 232 211;
+    --background: 20 28 20;
+    --foreground: 235 245 230;
 
-    --card: 25 38 20;
-    --card-foreground: 221 232 211;
-    --popover: 25 38 20;
-    --popover-foreground: 221 232 211;
+    --card: 28 38 28;
+    --card-foreground: 235 245 230;
+    --popover: 28 38 28;
+    --popover-foreground: 235 245 230;
 
     --primary: 154 201 120;
-    --primary-foreground: 22 36 15;
+    --primary-foreground: 15 22 15;
 
-    --secondary: 34 52 27;
-    --secondary-foreground: 221 232 211;
+    --secondary: 35 48 35;
+    --secondary-foreground: 235 245 230;
 
-    --muted: 30 45 24;
-    --muted-foreground: 171 192 156;
+    --muted: 35 48 35;
+    --muted-foreground: 180 200 170;
 
-    --accent: 46 71 35;
-    --accent-foreground: 221 232 211;
+    --accent: 45 65 45;
+    --accent-foreground: 235 245 230;
 
-    --destructive: 127 29 29;
+    --destructive: 180 50 50;
     --destructive-foreground: 248 248 248;
 
-    --border: 54 82 42;
-    --input: 54 82 42;
-    --ring: 133 186 97;
+    --border: 55 75 55;
+    --input: 55 75 55;
+    --ring: 154 201 120;
   }
 }
 
@@ -114,8 +112,7 @@ body {
   }
 
   body {
-    background-image:
-      radial-gradient(
+    background-image: radial-gradient(
         circle at 12% 12%,
         rgba(154, 201, 120, 0.2),
         transparent 40%
@@ -124,24 +121,21 @@ body {
         circle at 88% 4%,
         rgba(134, 188, 102, 0.16),
         transparent 38%
-      ),
-      linear-gradient(145deg, rgb(var(--background)), rgb(var(--background)));
+      ), linear-gradient(145deg, rgb(var(--background)), rgb(var(--background)));
     background-attachment: fixed;
   }
 
   .dark body {
-    background-image:
-      radial-gradient(
-        circle at 12% 10%,
-        rgba(154, 201, 120, 0.08),
-        transparent 42%
-      ),
-      radial-gradient(
-        circle at 88% 2%,
-        rgba(103, 159, 67, 0.07),
+    background-image: radial-gradient(
+        circle at 0% 0%,
+        rgba(160, 215, 125, 0.15),
         transparent 40%
       ),
-      linear-gradient(160deg, rgb(16, 26, 13), rgb(14, 21, 12));
+      radial-gradient(
+        circle at 100% 100%,
+        rgba(103, 159, 67, 0.1),
+        transparent 40%
+      ), linear-gradient(160deg, rgb(6, 9, 6), rgb(4, 6, 4));
   }
 
   h1,
@@ -150,7 +144,7 @@ body {
   h4,
   h5,
   h6 {
-    font-family: 'Manrope', sans-serif;
+    font-family: "Manrope", sans-serif;
     letter-spacing: -0.02em;
   }
 }

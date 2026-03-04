@@ -1,7 +1,7 @@
 import { GradientText } from '@/components/ui/gradient-text';
 import { blogPosts } from '@/data/blog-posts';
-import { FaArrowLeft, FaBookOpen, FaGithub } from 'react-icons/fa6';
 import { useEffect, useMemo, useState } from 'react';
+import { FaArrowLeft, FaBookOpen, FaGithub } from 'react-icons/fa6';
 import { useNavigate, useParams } from 'react-router-dom';
 
 type ResourceLink = {
@@ -104,7 +104,9 @@ export const BlogPage = () => {
                 Back to Blogs
               </button>
               <span className="text-sm text-muted-foreground">/</span>
-              <p className="text-sm font-medium text-foreground">{activePost.title}</p>
+              <p className="text-sm font-medium text-foreground">
+                {activePost.title}
+              </p>
             </div>
           </div>
 
@@ -118,7 +120,9 @@ export const BlogPage = () => {
               </span>
             </div>
 
-            <h1 className="text-2xl font-bold md:text-4xl">{activePost.title}</h1>
+            <h1 className="text-2xl font-bold md:text-4xl">
+              {activePost.title}
+            </h1>
             <p className="mt-3 leading-relaxed text-muted-foreground">
               {activePost.summary}
             </p>
@@ -163,7 +167,9 @@ export const BlogPage = () => {
             </div>
 
             <div className="mt-6 rounded-xl border border-border/60 bg-background/40 p-4 md:p-5 dark:border-border/50">
-              <p className="mb-2 text-sm font-semibold text-primary">Key takeaways</p>
+              <p className="mb-2 text-sm font-semibold text-primary">
+                Key takeaways
+              </p>
               <ul className="list-disc space-y-1.5 pl-5 text-sm text-muted-foreground">
                 {activePost.keyPoints.map((point) => (
                   <li key={point}>{point}</li>
@@ -172,7 +178,9 @@ export const BlogPage = () => {
             </div>
 
             <div className="mt-6">
-              <p className="mb-3 text-sm font-semibold text-foreground">Links</p>
+              <p className="mb-3 text-sm font-semibold text-foreground">
+                Links
+              </p>
               <div className="flex flex-wrap gap-2">
                 {(resourcesByPostId[activePost.id] ?? []).map((link) => {
                   const isGithub = link.url.includes('github.com');
@@ -251,7 +259,9 @@ export const BlogPage = () => {
                 <span>{post.readTime}</span>
               </div>
               <p className="text-lg font-semibold leading-snug">{post.title}</p>
-              <p className="mt-2 text-sm text-muted-foreground">{post.summary}</p>
+              <p className="mt-2 text-sm text-muted-foreground">
+                {post.summary}
+              </p>
             </button>
           ))}
         </div>

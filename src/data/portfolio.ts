@@ -11,9 +11,57 @@ export const portfolioData: PortfolioData = {
       'I design frontend platforms using microfrontends and shared component libraries for multi-client and multi-team development.',
       'I optimize build and delivery pipelines using Rspack, Webpack, Nx, and Vite to reduce friction and improve release velocity.',
       'I contribute to monorepos with reusable components, utility packages, and structured logging patterns.',
-      'I am currently deepening JavaScript fundamentals, improving DSA problem-solving, and exploring Rust with Axum.',
     ],
   },
+  experience: [
+    {
+      company: 'Affinsys AI (BankBuddy.ai, TelcoBuddy.ai)',
+      role: 'Frontend Developer',
+      startDate: '2021-11-01',
+      period: 'November 2021 - Present',
+      location: 'Bengaluru, Karnataka, India',
+      description: [
+        'Working as a full-time Frontend Developer since November 2021.',
+        'Previously worked as a Frontend Developer Intern from June 2021 to October 2021.',
+        'Learning and implementing microfrontends and modern JavaScript libraries for scalable web platforms.',
+      ],
+    },
+    {
+      company: 'Spotknack - Mission 2021',
+      role: 'Spotknack Talent Community | Frontend Developer',
+      duration: '4 months',
+      period: 'February 2021 - May 2021',
+      description: [
+        'Worked as a Frontend Developer for the Spotknack Talent Community.',
+      ],
+    },
+    {
+      company: 'FORGE Accelerator',
+      role: 'Graduate Innovation Engineer',
+      duration: '9 months',
+      period: 'February 2020 - October 2020',
+      location: 'Coimbatore Area, India',
+      description: [
+        "The Innovation/Startup fellowship program, ProtoSem is a 20-week, full-semester course, during which students are nurtured & guided to develop core technical concepts and key engineering skills and are transformed into 'Innovation Engineers'.",
+        'We work as a team with students from different engineering/technical/science streams, towards designing, developing and testing an innovative tech-enabled solution to solve a real-world problem sponsored by the industry, government, or social sector, etc.',
+        'We are guided to solve real-world challenges using the tools enabled by hardware, software, and computing technologies, and to evolve as Graduate Innovation Engineers and fully rounded professionals.',
+        'We gain skills and competencies to transform ourselves into creative problem-solvers, capable of building deployable/usable prototypes, selecting and applying technology to create cost-effective solutions.',
+        'We innovate and design solutions by setting and achieving metrics in customer development & discovery, value-proposition validation, market definition & sizing, customer acquisition, revenue model & competition analysis.',
+      ],
+    },
+  ],
+  education: [
+    {
+      institution: 'Kumaraguru College of Technology',
+      degree: 'Bachelor of Engineering, ECE',
+      period: '2017 - 2021',
+    },
+    {
+      institution: 'Tagore Matric Higher Secondary School',
+      degree: 'High School',
+      period: '2011 - 2017',
+    },
+  ],
   skills: [
     {
       title: 'Frontend',

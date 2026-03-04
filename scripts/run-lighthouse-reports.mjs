@@ -1,6 +1,6 @@
+import { spawnSync } from 'node:child_process';
 import { mkdirSync, readFileSync, readdirSync, unlinkSync } from 'node:fs';
 import { resolve } from 'node:path';
-import { spawnSync } from 'node:child_process';
 
 const targetUrl =
   process.argv[2] || process.env.LH_URL || 'http://localhost:3000';

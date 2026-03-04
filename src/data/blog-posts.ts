@@ -247,9 +247,7 @@ export const blogPosts: BlogPostItem[] = [
       },
       {
         heading: 'Example: rollup library build',
-        paragraphs: [
-          'This is a typical Rollup setup for library packaging.',
-        ],
+        paragraphs: ['This is a typical Rollup setup for library packaging.'],
         codeExample: {
           title: 'rollup.config.mjs',
           language: 'js',

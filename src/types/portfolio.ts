@@ -29,8 +29,26 @@ export interface ContactLink {
   url: string;
 }
 
+export interface Experience {
+  company: string;
+  role: string;
+  duration?: string; // Optional if calculated dynamically
+  startDate?: string; // ISO date string for dynamic calculation, e.g., '2021-11-01'
+  period: string;
+  location?: string;
+  description?: string[];
+}
+
+export interface Education {
+  institution: string;
+  degree: string;
+  period: string;
+}
+
 export interface PortfolioData {
   personal: PersonalInfo;
+  experience: Experience[];
+  education: Education[];
   skills: SkillCategory[];
   projects: Project[];
   contact: ContactLink[];

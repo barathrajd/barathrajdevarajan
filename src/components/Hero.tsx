@@ -1,8 +1,8 @@
 import { Button } from '@/components/ui/button';
 import { GradientText } from '@/components/ui/gradient-text';
 import type { PersonalInfo } from '@/types/portfolio';
+import { Suspense, lazy } from 'react';
 import { FaArrowRight, FaEnvelope } from 'react-icons/fa6';
-import { lazy, Suspense } from 'react';
 
 const TechStackCarousel = lazy(() =>
   import('@/components/TechStackCarousel').then((module) => ({
@@ -46,11 +46,15 @@ export const Hero = ({ personal }: HeroProps) => {
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10 max-w-3xl">
             <div className="rounded-xl border border-border/70 bg-card/65 p-4 backdrop-blur">
-              <p className="text-2xl font-extrabold text-foreground">5+ Years</p>
+              <p className="text-2xl font-extrabold text-foreground">
+                5+ Years
+              </p>
               <p className="text-sm text-muted-foreground mt-1">Experience</p>
             </div>
             <div className="rounded-xl border border-border/70 bg-card/65 p-4 backdrop-blur">
-              <p className="text-2xl font-extrabold text-foreground">10+ Tools</p>
+              <p className="text-2xl font-extrabold text-foreground">
+                10+ Tools
+              </p>
               <p className="text-sm text-muted-foreground mt-1">
                 Build and DX stack
               </p>

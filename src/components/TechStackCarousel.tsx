@@ -1,4 +1,3 @@
-import { FaBolt, FaCube, FaLayerGroup } from 'react-icons/fa';
 import {
   SiBiome,
   SiBootstrap,
@@ -26,6 +25,7 @@ import {
   SiVitest,
   SiWebpack,
 } from '@icons-pack/react-simple-icons';
+import { FaBolt, FaCube, FaLayerGroup } from 'react-icons/fa';
 
 import moduleFederationLogo from '../assets/module-federation-logo-64.png';
 import rsbuildLogo from '../assets/rsbuild-logo.svg';

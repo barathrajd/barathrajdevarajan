@@ -26,8 +26,8 @@ export const Contact = ({ contact }: ContactProps) => {
             Let's Connect
           </h2>
           <p className="text-muted-foreground text-center mb-10 text-lg max-w-2xl mx-auto">
-            Open to frontend platform work, tooling projects, and
-            collaboration on scalable React or Node.js systems.
+            Open to frontend platform work, tooling projects, and collaboration
+            on scalable React or Node.js systems.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4 max-w-2xl mx-auto">
             {contact.map((link) => {
