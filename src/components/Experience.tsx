@@ -63,7 +63,7 @@ export const Experience = ({ experience }: ExperienceProps) => {
                     </div>
 
                     <div className="flex flex-col gap-1.5 text-sm text-muted-foreground md:text-right">
-                      <div className="flex items-center md:justify-end gap-2">
+                      <div className="flex items-center md:justify-end gap-2 flex-wrap">
                         <FaCalendarAlt className="h-3.5 w-3.5 shrink-0" />
                         <span>
                           {exp.period} (

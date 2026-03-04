@@ -21,7 +21,7 @@ export const Education = ({ education }: EducationProps) => {
               key={`${edu.institution}-${edu.degree}`}
               className="border-border/70 bg-card/55 backdrop-blur hover:border-primary/35 transition-all duration-300 hover:-translate-y-1"
             >
-              <CardContent className="p-6">
+              <CardContent className="p-4 md:p-6">
                 <div className="flex items-start gap-4">
                   <div className="shrink-0 mt-1 rounded-lg border border-primary/30 bg-primary/15 p-2">
                     <FaGraduationCap className="h-5 w-5 text-primary" />
