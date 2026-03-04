@@ -29,7 +29,7 @@ export const Projects = ({ projects }: ProjectsProps) => {
               key={project.title}
               className="flex flex-col h-full border-border/70 bg-card/55 backdrop-blur hover:border-primary/35 transition-all duration-300 group hover:-translate-y-1"
             >
-              <CardHeader className="pb-3">
+              <CardHeader>
                 <CardTitle className="text-xl group-hover:text-foreground transition-colors leading-snug">
                   {project.title}
                 </CardTitle>
@@ -37,17 +37,21 @@ export const Projects = ({ projects }: ProjectsProps) => {
                   {project.description}
                 </CardDescription>
               </CardHeader>
-              <CardContent className="flex-grow pb-4">
-                <p className="text-sm text-muted-foreground mb-4 leading-relaxed min-h-[96px]">
+              <CardContent className="flex flex-col flex-grow">
+                <p className="text-sm text-muted-foreground mb-6 leading-relaxed">
                   {project.longDescription}
                 </p>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2 mt-auto pb-2">
                   {project.tags.map((tag) => (
                     <Badge
                       key={tag}
                       variant="outline"
                       className="border-primary/35 bg-primary/10 text-foreground/90"
                     >
+                      {project.title === 'Books Management System' &&
+                      tag === 'JavaScript' ? (
+                        <span className="mr-1">🚀</span>
+                      ) : null}
                       {tag}
                     </Badge>
                   ))}

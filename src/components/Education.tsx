@@ -15,7 +15,7 @@ export const Education = ({ education }: EducationProps) => {
           <div className="h-px bg-border/60 flex-1" />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {education.map((edu) => (
             <Card
               key={`${edu.institution}-${edu.degree}`}

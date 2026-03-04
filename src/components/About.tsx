@@ -23,7 +23,7 @@ export const About = ({ personal }: AboutProps) => {
           <div className="h-px bg-border/60 flex-1" />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {personal.about.map((point, index) => {
             const Icon = icons[index % icons.length] || FaRocket;
             return (
