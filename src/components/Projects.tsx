@@ -41,7 +41,7 @@ export const Projects = ({ projects }: ProjectsProps) => {
                 <p className="text-sm text-muted-foreground mb-6 leading-relaxed">
                   {project.longDescription}
                 </p>
-                <div className="flex flex-wrap gap-2 mt-auto pb-2">
+                <div className="flex flex-wrap gap-2 mt-auto">
                   {project.tags.map((tag) => (
                     <Badge
                       key={tag}
@@ -57,7 +57,7 @@ export const Projects = ({ projects }: ProjectsProps) => {
                   ))}
                 </div>
               </CardContent>
-              <CardFooter className="pt-4 border-t border-border/50">
+              <CardFooter className="pt-4 md:pt-6 border-t border-border/50">
                 <Button
                   className="w-full border-primary/35 bg-background/80 text-foreground hover:bg-primary/12 transition-colors"
                   variant="outline"

@@ -25,6 +25,7 @@ export default {
         primary: {
           DEFAULT: 'rgb(var(--primary))',
           foreground: 'rgb(var(--primary-foreground))',
+          dark: 'rgb(var(--primary-dark))',
         },
         secondary: {
           DEFAULT: 'rgb(var(--secondary))',
@@ -50,6 +51,9 @@ export default {
           DEFAULT: 'rgb(var(--card))',
           foreground: 'rgb(var(--card-foreground))',
         },
+        'text-primary': 'rgb(var(--foreground))',
+        'text-secondary': 'rgb(var(--secondary-foreground))',
+        surface: 'rgb(var(--card))',
       },
       borderRadius: {
         lg: 'var(--radius)',

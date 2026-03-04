@@ -38,7 +38,7 @@ export const Skills = ({ skills }: SkillsProps) => {
             return (
               <Card
                 key={category.title}
-                className="border-border/70 bg-card/55 backdrop-blur hover:border-primary/35 transition-all duration-300 group hover:-translate-y-1"
+                className="h-full border-border/70 bg-card/55 backdrop-blur hover:border-primary/35 transition-all duration-300 group hover:-translate-y-1"
               >
                 <CardHeader className="pb-4">
                   <CardTitle className="flex items-center gap-3 text-xl md:text-2xl">

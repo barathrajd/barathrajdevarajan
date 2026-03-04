@@ -19,7 +19,7 @@ export const Education = ({ education }: EducationProps) => {
           {education.map((edu) => (
             <Card
               key={`${edu.institution}-${edu.degree}`}
-              className="border-border/70 bg-card/55 backdrop-blur hover:border-primary/35 transition-all duration-300 hover:-translate-y-1"
+              className="h-full border-border/70 bg-card/55 backdrop-blur hover:border-primary/35 transition-all duration-300 hover:-translate-y-1"
             >
               <CardContent className="p-4 md:p-6">
                 <div className="flex items-start gap-4">
