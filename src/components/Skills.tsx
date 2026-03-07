@@ -38,13 +38,13 @@ export const Skills = ({ skills }: SkillsProps) => {
             return (
               <Card
                 key={category.title}
-                className="h-full border-border/70 bg-card/55 backdrop-blur hover:border-primary/35 transition-all duration-300 group hover:-translate-y-1"
+                className="h-full border-border bg-card"
               >
                 <CardHeader className="pb-4">
                   <CardTitle className="flex items-center gap-3 text-xl md:text-2xl">
                     <div
                       className={
-                        'p-2 rounded-lg bg-background/50 border border-border/60 group-hover:border-primary/35 transition-colors'
+                        'p-2 rounded-lg bg-secondary border border-border'
                       }
                     >
                       <Icon className={`h-6 w-6 ${colorClass}`} />
@@ -60,7 +60,7 @@ export const Skills = ({ skills }: SkillsProps) => {
                         href={skill.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="px-3 py-1.5 text-sm rounded-md bg-secondary/50 border border-border/60 text-muted-foreground hover:text-foreground hover:border-primary/35 hover:bg-secondary transition-all duration-300 cursor-pointer no-underline"
+                        className="px-3 py-1.5 text-sm rounded-md bg-secondary border border-border text-muted-foreground hover:text-foreground transition-colors cursor-pointer no-underline"
                       >
                         {skill.name}
                       </a>

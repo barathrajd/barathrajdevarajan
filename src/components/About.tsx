@@ -29,11 +29,11 @@ export const About = ({ personal }: AboutProps) => {
             return (
               <Card
                 key={point}
-                className="h-full border-border/70 bg-card/55 backdrop-blur hover:border-primary/35 transition-all duration-300 hover:-translate-y-1"
+                className="h-full border-border bg-card"
               >
                 <CardContent className="flex flex-col h-full p-4 md:p-6 justify-center">
                   <div className="flex items-center gap-4">
-                    <div className="shrink-0 rounded-lg border border-primary/30 bg-primary/15 p-2">
+                    <div className="shrink-0 rounded-lg border border-border bg-secondary p-2">
                       <Icon className="h-4 w-4 text-foreground" />
                     </div>
                     <p className="text-base md:text-lg text-foreground/95 leading-relaxed">

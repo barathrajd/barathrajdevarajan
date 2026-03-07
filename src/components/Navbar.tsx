@@ -59,16 +59,16 @@ export const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-0 w-full border-b border-border/60 dark:border-white/5 bg-background/85 dark:bg-background/60 backdrop-blur-xl z-50">
+    <nav className="fixed top-0 w-full border-b border-border bg-background z-50">
       <div className="container flex h-16 items-center justify-between px-4 md:px-8">
         <div className="flex items-center">
           <button
             type="button"
             onClick={handleLogoClick}
-            className="group rounded-md px-1 py-1 hover:text-primary transition-colors"
+            className="rounded-md px-1 py-1"
             aria-label="Home"
           >
-            <span className="text-lg md:text-[1.15rem] font-extrabold tracking-tight text-foreground group-hover:text-primary transition-colors">
+            <span className="text-lg md:text-[1.15rem] font-extrabold tracking-tight text-foreground">
               Barathraj Devarajan
             </span>
           </button>
@@ -77,42 +77,42 @@ export const Navbar = () => {
           <button
             type="button"
             onClick={() => handleNavClick('about')}
-            className="text-sm font-medium hover:text-primary transition-colors"
+            className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
           >
             About
           </button>
           <button
             type="button"
             onClick={() => handleNavClick('experience')}
-            className="text-sm font-medium hover:text-primary transition-colors"
+            className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
           >
             Experience
           </button>
           <button
             type="button"
             onClick={() => handleNavClick('education')}
-            className="text-sm font-medium hover:text-primary transition-colors"
+            className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
           >
             Education
           </button>
           <button
             type="button"
             onClick={() => handleNavClick('skills')}
-            className="text-sm font-medium hover:text-primary transition-colors"
+            className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
           >
             Skills
           </button>
           <button
             type="button"
             onClick={() => handleNavClick('projects')}
-            className="text-sm font-medium hover:text-primary transition-colors"
+            className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
           >
             Projects
           </button>
           <button
             type="button"
             onClick={() => handleNavClick('contact')}
-            className="text-sm font-medium hover:text-primary transition-colors"
+            className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
           >
             Contact
           </button>
@@ -121,8 +121,8 @@ export const Navbar = () => {
             className={({ isActive }) =>
               `text-sm font-medium transition-colors ${
                 isActive
-                  ? 'text-foreground font-semibold bg-secondary/80 px-2 py-1 rounded-md'
-                  : 'hover:text-foreground'
+                  ? 'text-foreground font-semibold'
+                  : 'text-foreground/80 hover:text-foreground'
               }`
             }
           >
@@ -173,7 +173,7 @@ export const Navbar = () => {
 
       {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (
-        <div className="absolute top-16 left-0 w-full bg-background border-b border-border/70 z-[60] md:hidden shadow-lg animate-in slide-in-from-top-4 duration-200">
+        <div className="absolute top-16 left-0 w-full bg-background border-b border-border z-[60] md:hidden">
           <div className="flex items-center justify-between p-4 border-b border-border/60">
             <span className="font-semibold">Menu</span>
             <Button
@@ -188,42 +188,42 @@ export const Navbar = () => {
             <button
               type="button"
               onClick={() => handleNavClick('about')}
-              className="text-left py-3 px-4 rounded-md hover:bg-accent transition-colors font-medium"
+              className="text-left py-3 px-4 rounded-md hover:bg-secondary transition-colors font-medium"
             >
               About
             </button>
             <button
               type="button"
               onClick={() => handleNavClick('experience')}
-              className="text-left py-3 px-4 rounded-md hover:bg-accent transition-colors font-medium"
+              className="text-left py-3 px-4 rounded-md hover:bg-secondary transition-colors font-medium"
             >
               Experience
             </button>
             <button
               type="button"
               onClick={() => handleNavClick('education')}
-              className="text-left py-3 px-4 rounded-md hover:bg-accent transition-colors font-medium"
+              className="text-left py-3 px-4 rounded-md hover:bg-secondary transition-colors font-medium"
             >
               Education
             </button>
             <button
               type="button"
               onClick={() => handleNavClick('skills')}
-              className="text-left py-3 px-4 rounded-md hover:bg-accent transition-colors font-medium"
+              className="text-left py-3 px-4 rounded-md hover:bg-secondary transition-colors font-medium"
             >
               Skills
             </button>
             <button
               type="button"
               onClick={() => handleNavClick('projects')}
-              className="text-left py-3 px-4 rounded-md hover:bg-accent transition-colors font-medium"
+              className="text-left py-3 px-4 rounded-md hover:bg-secondary transition-colors font-medium"
             >
               Projects
             </button>
             <button
               type="button"
               onClick={() => handleNavClick('contact')}
-              className="text-left py-3 px-4 rounded-md hover:bg-accent transition-colors font-medium"
+              className="text-left py-3 px-4 rounded-md hover:bg-secondary transition-colors font-medium"
             >
               Contact
             </button>
@@ -233,8 +233,8 @@ export const Navbar = () => {
               className={({ isActive }) =>
                 `text-left py-3 px-4 rounded-md transition-colors font-medium ${
                   isActive
-                    ? 'bg-secondary/70 text-foreground border border-border/70'
-                    : 'hover:bg-accent'
+                    ? 'bg-secondary text-foreground'
+                    : 'hover:bg-secondary'
                 }`
               }
             >

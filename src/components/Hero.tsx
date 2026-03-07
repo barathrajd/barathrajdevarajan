@@ -1,5 +1,4 @@
 import { Button } from '@/components/ui/button';
-import { GradientText } from '@/components/ui/gradient-text';
 import type { PersonalInfo } from '@/types/portfolio';
 import { Suspense, lazy } from 'react';
 import { FaArrowRight, FaEnvelope } from 'react-icons/fa6';
@@ -23,21 +22,15 @@ export const Hero = ({ personal }: HeroProps) => {
   };
 
   return (
-    <header className="relative min-h-screen flex flex-col justify-between overflow-hidden">
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute top-24 left-0 w-72 h-72 rounded-full bg-primary/15 blur-3xl" />
-        <div className="absolute bottom-12 right-0 w-96 h-96 rounded-full bg-primary/10 blur-3xl" />
-      </div>
-
+    <header className="min-h-screen flex flex-col justify-between">
       <div className="flex-1 flex items-center justify-center px-4 pt-24 md:pt-28 pb-8">
         <div className="container mx-auto max-w-6xl">
-          <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-border/70 bg-secondary/60 px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-foreground animate-float">
+          <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-border px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-foreground">
             Web Developer
           </div>
 
           <h1 className="text-4xl md:text-7xl font-extrabold tracking-tight mb-6 max-w-5xl leading-[1.05]">
-            Building <GradientText>scalable web systems</GradientText> and
-            custom developer tools.
+            Building scalable web systems and custom developer tools.
           </h1>
 
           <p className="text-lg md:text-2xl text-muted-foreground mb-10 max-w-3xl leading-relaxed">
@@ -45,13 +38,13 @@ export const Hero = ({ personal }: HeroProps) => {
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10 max-w-3xl">
-            <div className="rounded-xl border border-border/70 bg-card/65 p-4 backdrop-blur">
+            <div className="rounded-xl border border-border bg-card p-4">
               <p className="text-2xl font-extrabold text-foreground">
                 5+ Years
               </p>
               <p className="text-sm text-muted-foreground mt-1">Experience</p>
             </div>
-            <div className="rounded-xl border border-border/70 bg-card/65 p-4 backdrop-blur">
+            <div className="rounded-xl border border-border bg-card p-4">
               <p className="text-2xl font-extrabold text-foreground">
                 10+ Tools
               </p>
@@ -59,7 +52,7 @@ export const Hero = ({ personal }: HeroProps) => {
                 Build and DX stack
               </p>
             </div>
-            <div className="rounded-xl border border-border/70 bg-card/65 p-4 backdrop-blur">
+            <div className="rounded-xl border border-border bg-card p-4">
               <p className="text-2xl font-extrabold text-foreground">
                 End-to-End
               </p>
@@ -72,16 +65,16 @@ export const Hero = ({ personal }: HeroProps) => {
           <div className="flex flex-col sm:flex-row gap-4 items-start">
             <Button
               size="lg"
-              className="group min-w-[190px] bg-primary text-primary-foreground hover:bg-primary/90"
+              className="min-w-[190px] bg-primary text-primary-foreground hover:bg-primary/90"
               onClick={() => scrollToSection('projects')}
             >
               View Highlights
-              <FaArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+              <FaArrowRight className="ml-2 h-4 w-4" />
             </Button>
             <Button
               variant="outline"
               size="lg"
-              className="min-w-[190px] border-primary/35 bg-card/40 backdrop-blur hover:bg-primary/10"
+              className="min-w-[190px] border-border bg-background hover:bg-secondary"
               onClick={() => scrollToSection('contact')}
             >
               <FaEnvelope className="mr-2 h-4 w-4" />

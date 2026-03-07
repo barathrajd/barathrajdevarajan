@@ -27,10 +27,10 @@ export const Projects = ({ projects }: ProjectsProps) => {
           {projects.map((project) => (
             <Card
               key={project.title}
-              className="flex flex-col h-full border-border/70 bg-card/55 backdrop-blur hover:border-primary/35 transition-all duration-300 group hover:-translate-y-1"
+              className="flex flex-col h-full border-border bg-card"
             >
               <CardHeader>
-                <CardTitle className="text-xl group-hover:text-foreground transition-colors leading-snug">
+                <CardTitle className="text-xl leading-snug">
                   {project.title}
                 </CardTitle>
                 <CardDescription className="text-base text-foreground/85">
@@ -46,7 +46,7 @@ export const Projects = ({ projects }: ProjectsProps) => {
                     <Badge
                       key={tag}
                       variant="outline"
-                      className="border-primary/35 bg-primary/10 text-foreground/90"
+                      className="border-border bg-secondary text-foreground/90"
                     >
                       {project.title === 'Books Management System' &&
                       tag === 'JavaScript' ? (
@@ -59,7 +59,7 @@ export const Projects = ({ projects }: ProjectsProps) => {
               </CardContent>
               <CardFooter className="pt-4 md:pt-6 border-t border-border/50">
                 <Button
-                  className="w-full border-primary/35 bg-background/80 text-foreground hover:bg-primary/12 transition-colors"
+                  className="w-full border-border bg-background text-foreground hover:bg-secondary transition-colors"
                   variant="outline"
                   asChild
                 >

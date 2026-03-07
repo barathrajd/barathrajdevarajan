@@ -21,7 +21,7 @@ export const Contact = ({ contact }: ContactProps) => {
   return (
     <section className="py-20 px-4">
       <div className="container mx-auto max-w-4xl">
-        <div className="rounded-2xl border border-border/70 bg-card/55 backdrop-blur p-8 md:p-12">
+        <div className="rounded-2xl border border-border bg-card p-8 md:p-12">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
             Let's Connect
           </h2>
@@ -38,7 +38,7 @@ export const Contact = ({ contact }: ContactProps) => {
                   variant="outline"
                   size="lg"
                   asChild
-                  className="border-border/60 bg-background/55 hover:border-primary/35 hover:bg-primary/10 transition-all duration-300"
+                  className="border-border bg-background hover:bg-secondary transition-colors"
                 >
                   <a
                     href={link.url}

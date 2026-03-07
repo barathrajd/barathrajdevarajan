@@ -114,30 +114,7 @@ body {
   }
 
   body {
-    background-image: radial-gradient(
-        circle at 12% 12%,
-        rgba(154, 201, 120, 0.2),
-        transparent 40%
-      ),
-      radial-gradient(
-        circle at 88% 4%,
-        rgba(134, 188, 102, 0.16),
-        transparent 38%
-      ), linear-gradient(145deg, rgb(var(--background)), rgb(var(--background)));
-    background-attachment: fixed;
-  }
-
-  .dark body {
-    background-image: radial-gradient(
-        circle at 0% 0%,
-        rgba(160, 215, 125, 0.15),
-        transparent 40%
-      ),
-      radial-gradient(
-        circle at 100% 100%,
-        rgba(103, 159, 67, 0.1),
-        transparent 40%
-      ), linear-gradient(160deg, rgb(6, 9, 6), rgb(4, 6, 4));
+    background-color: rgb(var(--background));
   }
 
   h1,
