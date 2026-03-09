@@ -1,13 +1,13 @@
 import { Layout } from '@/components/Layout';
 import { HomePage } from '@/pages/Home';
-import { Suspense, lazy } from 'react';
+import { Suspense } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 
 // Lazy load non-critical page components
-const BlogPage = lazy(() =>
-  import('@/pages/Blog').then((module) => ({ default: module.BlogPage })),
-);
+// const BlogPage = lazy(() =>
+//   import('@/pages/Blog').then((module) => ({ default: module.BlogPage })),
+// );
 
 // Reserve layout space to avoid footer jumps while route chunks load.
 const PageLoader = () => (
@@ -37,8 +37,10 @@ const App = () => {
         <Suspense fallback={<PageLoader />}>
           <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route path="/blog" element={<BlogPage />} />
-            <Route path="/blog/:postId" element={<BlogPage />} />
+            {/* Blog listing route */}
+            {/* <Route path="/blog" element={<BlogPage />} /> */}
+            {/* Blog detail route (resolved by postId param) */}
+            {/* <Route path="/blog/:postId" element={<BlogPage />} /> */}
           </Routes>
         </Suspense>
       </Layout>

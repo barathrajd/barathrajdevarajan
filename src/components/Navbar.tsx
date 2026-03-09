@@ -116,7 +116,7 @@ export const Navbar = () => {
           >
             Contact
           </button>
-          <NavLink
+          {/* <NavLink
             to="/blog"
             className={({ isActive }) =>
               `text-sm font-medium transition-colors ${
@@ -127,7 +127,7 @@ export const Navbar = () => {
             }
           >
             Blog
-          </NavLink>
+          </NavLink> */}
           <Button variant="ghost" size="icon" onClick={toggleTheme}>
             <span className="sr-only">Toggle theme</span>
             {theme === 'dark' ? (
