@@ -5,7 +5,7 @@ export const portfolioData: PortfolioData = {
   personal: {
     name: 'Barathraj D',
     tagline:
-      'Frontend Architect & Developer with 4+ years of experience building scalable enterprise platforms and micro-frontend systems.',
+      'Frontend Developer with 4+ years of experience building scalable enterprise platforms and micro-frontend systems.',
     about: [
       'Architected and maintained React-based frontend applications, focusing on shared shell architecture, micro-frontend integration, and reusable UI foundations.',
       'Led enterprise-wide frontend modernization by migrating legacy systems to Rspack, pnpm, Biome, and rstest, significantly improving build speeds and developer experience.',
