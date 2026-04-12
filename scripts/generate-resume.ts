@@ -286,11 +286,9 @@ const generateHTML = (data: PortfolioData) => {
     <span>/</span>
     <a href="https://barathrajdevarajan.dev" target="_blank">barathrajdevarajan.dev</a>
     <span>/</span>
-    <a href="https://github.com/barathrajd" target="_blank">GitHub</a>
+    <a href="https://github.com/barathrajd" target="_blank">https://github.com/barathrajd</a>
     <span>/</span>
     <a href="https://linkedin.com/in/barathrajd" target="_blank">https://linkedin.com/in/barathrajd</a>
-    <span>/</span>
-    Bengaluru, Karnataka, India
   </div>
 </header>
 
@@ -433,7 +431,7 @@ const generatePDF = async (html: string) => {
       },
     });
     await browser.close();
-    console.log('Resume PDF updated at public/resume.pdf');
+    console.log(`Resume PDF updated at ${pdfPath}`);
   } catch (error) {
     console.error('Failed to generate PDF:', error);
   }

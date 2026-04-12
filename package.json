@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "rsbuild build",
+    "build": "pnpm generate:resume && rsbuild build",
     "check": "biome check --write",
     "dev": "concurrently \"pnpm watch:resume\" \"rsbuild dev --open\"",
     "format": "biome format --write",
