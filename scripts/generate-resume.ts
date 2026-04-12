@@ -6,7 +6,7 @@ import { portfolioData } from '../src/data/portfolio';
 import type { PortfolioData } from '../src/types/portfolio';
 
 const outputPath = path.resolve(process.cwd(), 'public/resume.html');
-const pdfPath = path.resolve(process.cwd(), 'public/resume.pdf');
+const pdfPath = path.resolve(process.cwd(), 'public/Barathraj D.pdf');
 
 const generateHTML = (data: PortfolioData) => {
   const { email, personal, experience, education, skills, projects, contact } =
@@ -288,7 +288,7 @@ const generateHTML = (data: PortfolioData) => {
     <span>/</span>
     <a href="https://github.com/barathrajd" target="_blank">GitHub</a>
     <span>/</span>
-    <a href="https://linkedin.com/in/barathrajd" target="_blank">LinkedIn</a>
+    <a href="https://linkedin.com/in/barathrajd" target="_blank">https://linkedin.com/in/barathrajd</a>
     <span>/</span>
     Bengaluru, Karnataka, India
   </div>

@@ -87,7 +87,7 @@ export const Hero = ({ personal }: HeroProps) => {
               className="min-w-[190px] border-border bg-background hover:bg-secondary"
               asChild
             >
-              <a href="/resume.pdf" download="Barathraj_D_Resume.pdf">
+              <a href="/Barathraj D.pdf" download="Barathraj D.pdf">
                 Download Resume
               </a>
             </Button>
