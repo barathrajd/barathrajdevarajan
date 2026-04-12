@@ -5,12 +5,12 @@ export const portfolioData: PortfolioData = {
   personal: {
     name: 'Barathraj D',
     tagline:
-      'Frontend Developer with 4+ years of experience specializing in high-performance React applications, Micro-frontend architectures, and modern build tooling.',
+      'Frontend Architect & Developer with 4+ years of experience building scalable enterprise platforms and micro-frontend systems.',
     about: [
-      'Experienced Senior Frontend Developer with a focus on building scalable enterprise platforms and reusable UI foundations using React and Micro-frontends.',
-      'Proven track record in modernizing legacy frontend stacks, resulting in up to 40% faster build times and significantly improved developer experience.',
-      'Specialist in Shared Application Shells, Module Federation 2.0, and complex UI library development for multi-module enterprise systems.',
-      'Strong expertise in optimizing production reliability through automated release workflows and advanced CI/CD integration.',
+      'Architected and maintained React-based frontend applications, focusing on shared shell architecture, micro-frontend integration, and reusable UI foundations.',
+      'Led enterprise-wide frontend modernization by migrating legacy systems to Rspack, pnpm, Biome, and rstest, significantly improving build speeds and developer experience.',
+      'Designed and refined shared navigation systems, permission-aware routing, and command/search interactions for complex multi-module platforms.',
+      'Expertise in Micro-frontends (Module Federation 2.0), Redux Toolkit, and MUI, with a strong focus on platform consistency and shared dependency management.',
     ],
   },
   experience: [
@@ -18,8 +18,8 @@ export const portfolioData: PortfolioData = {
       company: 'Affinsys AI (BankBuddy.ai, TelcoBuddy.ai)',
       role: 'Frontend Developer',
       startDate: '2021-06-01',
-      period: 'Jun 2021 - Present',
-      location: 'Bengaluru, KA, India',
+      period: 'June 2021 - Present',
+      location: 'Bengaluru, Karnataka, India',
       description: [
         'Architected and managed 10+ React repositories using Micro-frontend architecture (Module Federation 2.0), reducing cross-team dependency conflicts by 60%.',
         'Led the full-stack modernization of the frontend infrastructure, migrating to Rspack and pnpm, which reduced local dev startup time from 45s to 3s.',
@@ -30,31 +30,26 @@ export const portfolioData: PortfolioData = {
     },
     {
       company: 'Spotknack - Mission 2021',
-      role: 'Frontend Developer',
+      role: 'Spotknack Talent Community | Frontend Developer',
       duration: '4 months',
-      period: 'Feb 2021 - May 2021',
+      period: 'February 2021 - May 2021',
       description: [
-        'Developed responsive user interfaces for the Spotknack Talent Community platform using React and modern CSS, improving mobile accessibility scores by 25%.',
+        'Worked as a Frontend Developer for the Spotknack Talent Community.',
       ],
     },
     {
       company: 'FORGE Accelerator',
-      role: 'Graduate Product Engineer',
+      role: 'Graduate Innovation Engineer',
       duration: '9 months',
-      period: 'Feb 2020 - Oct 2020',
-      location: 'Coimbatore, TN, India',
+      period: 'February 2020 - October 2020',
+      location: 'Coimbatore Area, India',
       description: [
-        'Selected for the ProtoSem fellowship among 500+ applicants to design and prototype tech-enabled solutions for industrial and social challenges.',
-        'Collaborated in a multi-disciplinary team to develop a functional IoT-based prototype, focusing on frontend data visualization and real-time monitoring.',
-        'Conducted market discovery and technical validation for cost-effective hardware-software integrated solutions.',
+        "The Innovation/Startup fellowship program, ProtoSem is a 20-week, full-semester course, during which students are nurtured & guided to develop core technical concepts and key engineering skills and are transformed into 'Innovation Engineers'.",
+        'We work as a team with students from different engineering/technical/science streams, towards designing, developing and testing an innovative tech-enabled solution to solve a real-world problem sponsored by the industry, government, or social sector, etc.',
+        'We are guided to solve real-world challenges using the tools enabled by hardware, software, and computing technologies, and to evolve as Graduate Innovation Engineers and fully rounded professionals.',
+        'We gain skills and competencies to transform ourselves into creative problem-solvers, capable of building deployable/usable prototypes, selecting and applying technology to create cost-effective solutions.',
+        'We innovate and design solutions by setting and achieving metrics in customer development & discovery, value-proposition validation, market definition & sizing, customer acquisition, revenue model & competition analysis.',
       ],
-    },
-  ],
-  education: [
-    {
-      institution: 'Kumaraguru College of Technology',
-      degree: 'Bachelor of Engineering (ECE)',
-      period: '2017 - 2021',
     },
   ],
   skills: [
@@ -110,20 +105,33 @@ export const portfolioData: PortfolioData = {
       ],
     },
   ],
+  education: [
+    {
+      institution: 'Kumaraguru College of Technology',
+      degree: 'Bachelor of Engineering, ECE',
+      period: '2017 - 2021',
+    },
+    {
+      institution: 'Tagore Matric Higher Secondary School',
+      degree: 'High School',
+      period: '2011 - 2017',
+    },
+  ],
+
   projects: [
     {
       title: 'Books Management System',
-      description: 'Full-stack platform for book exchange and management.',
+      description: 'A platform to sell, buy, and request books.',
       longDescription:
-        'Engineered a scalable system using Node.js and MongoDB to automate book exchange workflows. Implemented robust search algorithms and user profile management, serving a pilot user group for decentralized book sharing.',
-      tags: ['JavaScript', 'Node.js', 'MongoDB', 'React'],
+        'Built to support book exchange workflows with user-focused interactions. Includes core management capabilities and planned chat features for richer buyer and requester communication.',
+      tags: ['JavaScript', 'Node.js', 'MongoDB'],
       githubUrl: 'https://github.com/barathrajd/booksmanagementsystem',
     },
     {
-      title: 'EveMa Lead Acquisition',
-      description: 'Event data acquisition and communication engine.',
+      title: 'EveMa',
+      description: 'Event data acquisition and communication platform.',
       longDescription:
-        'Architected an analytics-driven platform for capturing exhibitor-visitor interactions. Reduced lead response time by 50% through automated profile-based follow-up triggers and real-time dashboard visualization.',
+        'Software for event workflows that enables visitor and exhibitor communication, profile-based analytics, and follow-up optimization to convert high-intent leads into business outcomes.',
       tags: ['React', 'Node.js', 'Express', 'Data Analytics'],
       githubUrl: 'https://github.com/Evema-event/EveMa',
     },
