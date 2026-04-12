@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import puppeteer from 'puppeteer';
+import chromium from '@sparticuz/chromium';
+import puppeteer, { type Browser } from 'puppeteer-core';
 import { portfolioData } from '../src/data/portfolio';
 import type { PortfolioData } from '../src/types/portfolio';
 
@@ -392,10 +393,31 @@ const generateHTML = (data: PortfolioData) => {
 
 const generatePDF = async (html: string) => {
   try {
-    const browser = await puppeteer.launch({
-      headless: true,
-      args: ['--no-sandbox', '--disable-setuid-sandbox'],
-    });
+    let browser: Browser;
+    const isProd = process.env.VERCEL === '1' || process.platform === 'linux';
+
+    if (isProd) {
+      console.log(
+        'Production environment detected. Using sparticuz/chromium...',
+      );
+      // biome-ignore lint/suspicious/noExplicitAny: <explanation>
+      const chromiumAny = chromium as any;
+      browser = await puppeteer.launch({
+        args: chromiumAny.args,
+        defaultViewport: chromiumAny.defaultViewport,
+        executablePath: await chromiumAny.executablePath(),
+        headless: chromiumAny.headless,
+      });
+    } else {
+      console.log('Local environment detected. Using standard puppeteer...');
+      // Dynamic import to avoid issues if puppeteer isn't fully set up for core
+      const localPuppeteer = (await import('puppeteer')).default;
+      browser = await localPuppeteer.launch({
+        headless: true,
+        args: ['--no-sandbox', '--disable-setuid-sandbox'],
+      });
+    }
+
     const page = await browser.newPage();
     await page.setContent(html, { waitUntil: 'networkidle0' });
     await page.pdf({
