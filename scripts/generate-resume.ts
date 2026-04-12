@@ -23,107 +23,97 @@ const generateHTML = (data: PortfolioData) => {
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   :root {
-    --ink: #18181A;
-    --ink-2: #46464A;
-    --ink-3: #8A8A90;
-    --rule: #DDDDD8;
-    --accent: #1D9E75;
-    --accent-dim: #0F6E56;
-    --page: #FAFAF7;
+    --ink: #000000;
+    --ink-2: #333333;
+    --ink-3: #555555;
+    --rule: #cccccc;
+    --page: #ffffff;
   }
 
-  html { background: #E5E4DF; }
+  html { background: #f0f0f0; }
 
   body {
-    font-family: 'DM Mono', monospace;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     background: var(--page);
     color: var(--ink);
-    font-size: 10.5px;
-    line-height: 1.65;
-    max-width: 840px;
-    margin: 32px auto;
-    padding: 52px 56px;
-    box-shadow: 0 2px 40px rgba(0,0,0,0.13);
+    font-size: 10px;
+    line-height: 1.5;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 40px 50px;
     position: relative;
   }
 
-
-
   /* HEADER */
   .header {
-    padding-bottom: 18px;
-    border-bottom: 1.5px solid var(--ink);
-    margin-bottom: 0;
+    padding-bottom: 12px;
+    margin-bottom: 16px;
+    border-bottom: 2px solid var(--ink);
   }
 
   h1 {
-    font-family: 'DM Mono', monospace;
-    font-size: 32px;
-    font-weight: 500;
-    line-height: 1;
-    letter-spacing: -0.5px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.1;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
   }
 
   h1 em {
     font-style: normal;
-    color: var(--accent);
+    color: var(--ink);
   }
 
   .tagline {
-    font-size: 10px;
+    font-size: 11px;
+    font-weight: 600;
     color: var(--ink-2);
-    letter-spacing: 0.03em;
-    margin-top: 8px;
-    max-width: 100%;
-    line-height: 1.5;
-    font-weight: 500;
+    margin-top: 4px;
   }
 
   .contact-line {
     font-size: 9.5px;
-    color: var(--ink-3);
+    color: var(--ink-2);
     margin-top: 6px;
     display: flex;
-    gap: 6px;
+    gap: 8px;
     flex-wrap: wrap;
     align-items: center;
   }
 
-  .contact-line a { color: var(--accent-dim); text-decoration: none; }
-  .contact-line span { color: var(--rule); }  /* SECTION STYLING */
+  .contact-line a { color: var(--ink); text-decoration: none; border-bottom: 0.5px solid transparent; }
+  .contact-line a:hover { border-bottom-color: var(--ink); }
+  .contact-line span { color: var(--rule); }
+
+  /* SECTION STYLING */
   .section {
     padding: 12px 0;
-    border-top: 0.5px solid var(--rule);
   }
 
   .section-label {
-    font-size: 9.5px;
-    font-weight: 500;
-    letter-spacing: 0.14em;
+    font-size: 11px;
+    font-weight: 700;
     text-transform: uppercase;
-    color: var(--accent);
+    color: var(--ink);
+    border-bottom: 1px solid var(--ink);
     margin-bottom: 8px;
+    padding-bottom: 2px;
   }
 
-  /* ABOUT */
-  .about-list { list-style: none; }
-
-  .about-list li {
+  /* LISTS */
+  ul { list-style: none; }
+  li {
     padding-left: 14px;
     position: relative;
-    color: var(--ink-2);
+    color: var(--ink);
     margin-bottom: 3px;
     font-size: 9.5px;
-    line-height: 1.5;
   }
-
-  .about-list li::before {
-    content: '—';
+  li::before {
+    content: '•';
     position: absolute;
     left: 0;
-    color: var(--accent);
-    font-size: 8px;
-    top: 0px;
+    color: var(--ink);
   }
 
   /* EXPERIENCE */
@@ -134,143 +124,79 @@ const generateHTML = (data: PortfolioData) => {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    gap: 8px;
-    margin-bottom: 1px;
+    margin-bottom: 2px;
   }
 
   .job-role {
-    font-size: 10.5px;
-    font-weight: 500;
+    font-size: 11px;
+    font-weight: 700;
   }
 
   .job-period {
-    font-size: 8.5px;
-    color: var(--ink-3);
-    white-space: nowrap;
-  }
-
-  .job-company {
-    font-size: 9px;
-    color: var(--accent-dim);
+    font-size: 9.5px;
     font-weight: 500;
-    letter-spacing: 0.02em;
-    margin-bottom: 4px;
-  }
-
-  .job-location { color: var(--ink-3); font-weight: 400; font-size: 8.5px; }
-
-  .job ul { list-style: none; }
-
-  .job ul li {
-    padding-left: 14px;
-    position: relative;
     color: var(--ink-2);
-    margin-bottom: 2px;
-    font-size: 9px;
   }
 
-  .job ul li::before {
-    content: '→';
-    position: absolute;
-    left: 0;
-    color: var(--accent);
-    font-size: 8px;
-    top: 2px;
+  .job-company-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--ink-2);
+    margin-bottom: 6px;
   }
+
+  .job-location { font-weight: 400; font-style: italic; }
 
   /* SKILLS */
-  .skills-grid {
-     display: grid;
-     grid-template-columns: repeat(2, 1fr);
-     gap: 10px 24px;
+  .skills-container {
+     display: flex;
+     flex-direction: column;
+     gap: 6px;
   }
-  .skill-group { margin-bottom: 0; }
-
+  .skill-group { display: flex; gap: 8px; }
   .skill-category {
-    font-size: 8px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--ink-3);
-    margin-bottom: 4px;
-    font-weight: 500;
+    font-weight: 700;
+    min-width: 160px;
+    font-size: 9.5px;
   }
-
-  .chips { display: flex; flex-wrap: wrap; gap: 4px; }
-
-  .chip {
-    font-size: 8px;
-    padding: 1px 6px;
-    border: 0.5px solid var(--rule);
+  .skill-list {
     color: var(--ink-2);
-    border-radius: 2px;
+    font-size: 9.5px;
   }
 
   /* PROJECTS */
   .projects-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 12px 24px;
+    gap: 16px;
   }
-  .project { margin-bottom: 0; }
-
   .project-title {
-    font-size: 10.5px;
-    font-weight: 500;
-    margin-bottom: 1px;
+    font-size: 11px;
+    font-weight: 700;
+    margin-bottom: 2px;
   }
-
-  .project-title a {
-    color: var(--ink);
-    text-decoration: none;
-    border-bottom: 0.5px solid var(--rule);
-  }
-
-  .project-short { color: var(--ink-2); margin-bottom: 2px; font-size: 9px; }
-
-  .project-long {
-    color: var(--ink-3);
-    font-size: 8.5px;
-    margin-bottom: 4px;
-    line-height: 1.5;
-  }
-
-  .tags { display: flex; flex-wrap: wrap; gap: 3px; }
-
-  .tag {
-    font-size: 8px;
-    padding: 0px 5px;
-    border: 0.50px solid var(--rule);
-    color: var(--ink-3);
-    border-radius: 2px;
-  }
+  .project-short { font-weight: 600; font-size: 9.5px; margin-bottom: 2px; }
+  .project-long { font-size: 9px; color: var(--ink-2); }
 
   /* EDUCATION */
-  .edu-grid {
-     display: grid;
-     grid-template-columns: 1fr 1fr;
-     gap: 12px 24px;
+  .edu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
   }
-  .edu { margin-bottom: 0; }
-
-  .edu-degree {
-    font-size: 10.5px;
-    font-weight: 500;
-  }
-
-  .edu-meta { font-size: 9px; color: var(--ink-3); margin-top: 1px; }
+  .edu-degree { font-weight: 700; font-size: 11px; }
+  .edu-inst { font-weight: 500; font-size: 10px; }
 
   @media print {
     html { background: white; }
     body { 
       margin: 0; 
-      padding: 0.4in 0.5in; 
-      box-shadow: none; 
+      padding: 0.5in; 
       max-width: 100%;
-      font-size: 9.5px;
     }
-    .header { padding-bottom: 12px; border-bottom: 1.5px solid var(--ink); }
-    h1 { font-size: 24px; }
-    .section { padding: 10px 0; break-inside: avoid; }
+    .section { break-inside: avoid; }
   }
 </style>
 </head>
@@ -286,25 +212,27 @@ const generateHTML = (data: PortfolioData) => {
     <span>/</span>
     <a href="https://barathrajdevarajan.dev" target="_blank">barathrajdevarajan.dev</a>
     <span>/</span>
-    <a href="https://github.com/barathrajd" target="_blank">https://github.com/barathrajd</a>
+    <a href="https://github.com/barathrajd" target="_blank">github.com/barathrajd</a>
     <span>/</span>
-    <a href="https://linkedin.com/in/barathrajd" target="_blank">https://linkedin.com/in/barathrajd</a>
+    <a href="https://linkedin.com/in/barathrajd" target="_blank">linkedin.com/in/barathrajd</a>
+    <span>/</span>
+    Bengaluru, KA, India
   </div>
 </header>
 
 <main>
 
-  <!-- ABOUT -->
+  <!-- PROFESSIONAL SUMMARY -->
   <section class="section">
-    <h2 class="section-label">About</h2>
-    <ul class="about-list">
+    <h2 class="section-label">Professional Summary</h2>
+    <ul>
       ${personal.about.map((item) => `<li>${item}</li>`).join('\n      ')}
     </ul>
   </section>
 
-  <!-- EXPERIENCE -->
+  <!-- WORK EXPERIENCE -->
   <section class="section">
-    <h2 class="section-label">Experience</h2>
+    <h2 class="section-label">Work Experience</h2>
     <div>
     ${experience
       .map(
@@ -314,7 +242,10 @@ const generateHTML = (data: PortfolioData) => {
         <span class="job-role">${job.role}</span>
         <span class="job-period">${job.period}</span>
       </div>
-      <div class="job-company">${job.company} ${job.location ? `<span class="job-location">· ${job.location}</span>` : ''}</div>
+      <div class="job-company-meta">
+        <span>${job.company}</span>
+        ${job.location ? `<span class="job-location">${job.location}</span>` : ''}
+      </div>
       <ul>
         ${job.description?.map((desc) => `<li>${desc}</li>`).join('\n        ')}
       </ul>
@@ -324,25 +255,22 @@ const generateHTML = (data: PortfolioData) => {
     </div>
   </section>
 
-  <!-- SKILLS -->
+  <!-- TECHNICAL SKILLS -->
   <section class="section">
-    <h2 class="section-label">Technical Stack</h2>
-    <div class="skills-grid">
+    <h2 class="section-label">Technical Skills</h2>
+    <div class="skills-container">
       ${skills
         .map(
           (group) => `
       <div class="skill-group">
-        <div class="skill-category">${group.title}</div>
-        <div class="chips">
-          ${group.skills.map((skill) => `<span class="chip">${skill.name}</span>`).join('\n        ')}
-        </div>
+        <span class="skill-category">${group.title}:</span>
+        <span class="skill-list">${group.skills.map((skill) => skill.name).join(', ')}</span>
       </div>`,
         )
         .join('\n')}
     </div>
   </section>
 
-  <!-- PROJECTS -->
   <section class="section">
     <h2 class="section-label">Projects</h2>
     <div class="projects-grid">
@@ -350,14 +278,10 @@ const generateHTML = (data: PortfolioData) => {
         .map(
           (proj) => `
       <div class="project">
-        <div class="project-title">
-          <a href="${proj.githubUrl}" target="_blank">${proj.title}</a>
-        </div>
+        <div class="project-title">${proj.title}</div>
         <div class="project-short">${proj.description}</div>
         <div class="project-long">${proj.longDescription}</div>
-        <div class="tags">
-          ${proj.tags.map((tag) => `<span class="tag">${tag}</span>`).join('\n        ')}
-        </div>
+        <div style="font-size: 8.5px; margin-top: 4px; font-weight: 600;">Technologies: ${proj.tags.join(', ')}</div>
       </div>`,
         )
         .join('\n')}
@@ -367,14 +291,15 @@ const generateHTML = (data: PortfolioData) => {
   <!-- EDUCATION -->
   <section class="section">
     <h2 class="section-label">Education</h2>
-    <div class="edu-grid">
+    <div>
       ${education
         .map(
           (edu) => `
-      <div class="edu">
-        <div class="edu-degree">${edu.degree}</div>
-        <div class="edu-meta">${edu.institution} · ${edu.period}</div>
-      </div>`,
+      <div class="edu-item">
+        <span class="edu-degree">${edu.degree}</span>
+        <span class="job-period">${edu.period}</span>
+      </div>
+      <div class="edu-inst">${edu.institution}</div>`,
         )
         .join('\n')}
     </div>
