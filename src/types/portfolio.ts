@@ -24,7 +24,7 @@ export interface Project {
 }
 
 export interface ContactLink {
-  type: 'email' | 'github' | 'website';
+  type: 'email' | 'github' | 'linkedin' | 'website' | 'link';
   label: string;
   url: string;
 }
@@ -46,6 +46,7 @@ export interface Education {
 }
 
 export interface PortfolioData {
+  email: string;
   personal: PersonalInfo;
   experience: Experience[];
   education: Education[];

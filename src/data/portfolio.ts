@@ -1,29 +1,31 @@
 import type { PortfolioData } from '@/types/portfolio';
 
 export const portfolioData: PortfolioData = {
+  email: 'barathraj.uidev@gmail.com',
   personal: {
-    name: 'Barathraj Devarajan',
+    name: 'Barathraj D',
     tagline:
-      'Web Developer with 5+ years of experience building modern web applications and custom tools.',
+      'Frontend Architect & Developer with 4+ years of experience building scalable enterprise platforms and micro-frontend systems.',
     about: [
-      'My core expertise is in React, Node.js, and Rspack, with a strong focus on building scalable systems that connect frontend and backend cleanly.',
-      'I build custom tools and SDKs for asset management, file uploads, and developer productivity workflows.',
-      'I design frontend platforms using microfrontends and shared component libraries for multi-client and multi-team development.',
-      'I optimize build and delivery pipelines using Rspack, Webpack, Nx, and Vite to reduce friction and improve release velocity.',
-      'I contribute to monorepos with reusable components, utility packages, and structured logging patterns.',
+      'Architected and maintained React-based frontend applications, focusing on shared shell architecture, micro-frontend integration, and reusable UI foundations.',
+      'Led enterprise-wide frontend modernization by migrating legacy systems to Rspack, pnpm, Biome, and rstest, significantly improving build speeds and developer experience.',
+      'Designed and refined shared navigation systems, permission-aware routing, and command/search interactions for complex multi-module platforms.',
+      'Expertise in Micro-frontends (Module Federation 2.0), Redux Toolkit, and MUI, with a strong focus on platform consistency and shared dependency management.',
     ],
   },
   experience: [
     {
       company: 'Affinsys AI (BankBuddy.ai, TelcoBuddy.ai)',
       role: 'Frontend Developer',
-      startDate: '2021-11-01',
-      period: 'November 2021 - Present',
+      startDate: '2021-06-01',
+      period: 'June 2021 - Present',
       location: 'Bengaluru, Karnataka, India',
       description: [
-        'Working as a full-time Frontend Developer since November 2021.',
-        'Previously worked as a Frontend Developer Intern from June 2021 to October 2021.',
-        'Learning and implementing microfrontends and modern JavaScript libraries for scalable web platforms.',
+        'Architected and managed React-based frontend repositories using Micro-frontend architecture (Module Federation 2.0) and shared application shells.',
+        'Led the modernization of the entire frontend stack, migrating from legacy builds to Rspack, pnpm, Biome, and rstest, resulting in faster builds and improved DX.',
+        'Built several enterprise-grade systems including a Shared Application Shell, User & Access Administration, Reporting & Insights Dashboard, and a Visual Flow Builder.',
+        'Developed a highly configurable Conversational Interface System with real-time messaging, file handling, and customizable UI/theme support.',
+        'Created and maintained a comprehensive Shared UI Library and Tooling platform, standardizing components (tables, alerts, forms) and release automation workflows across teams.',
       ],
     },
     {
@@ -64,47 +66,63 @@ export const portfolioData: PortfolioData = {
   ],
   skills: [
     {
-      title: 'Frontend',
+      title: 'Frontend Core & Frameworks',
       icon: 'Code2',
       skills: [
         { name: 'React.js', url: 'https://react.dev' },
-        { name: 'Next.js', url: 'https://nextjs.org' },
-        { name: 'Microfrontends', url: 'https://module-federation.io/' },
-        { name: 'Shadcn/UI', url: 'https://ui.shadcn.com' },
-        { name: 'Shared UI Libraries', url: 'https://storybook.js.org' },
-      ],
-    },
-    {
-      title: 'Backend',
-      icon: 'Database',
-      skills: [
-        { name: 'Node.js', url: 'https://nodejs.org' },
-        { name: 'Express.js', url: 'https://expressjs.com' },
-        { name: 'REST APIs', url: 'https://restfulapi.net' },
-        { name: 'Custom SDKs', url: 'https://github.com/barathrajd' },
-      ],
-    },
-    {
-      title: 'Build Tools',
-      icon: 'Terminal',
-      skills: [
-        { name: 'Rspack', url: 'https://rspack.dev' },
-        { name: 'Webpack', url: 'https://webpack.js.org' },
-        { name: 'Nx', url: 'https://nx.dev' },
-        { name: 'Vite', url: 'https://vitejs.dev' },
-        { name: 'CI/CD', url: 'https://docs.github.com/en/actions' },
-      ],
-    },
-    {
-      title: 'Languages',
-      icon: 'Wrench',
-      skills: [
+        { name: 'TypeScript', url: 'https://www.typescriptlang.org' },
         {
-          name: 'JavaScript (Advanced)',
+          name: 'JavaScript (ES6+)',
           url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
         },
-        { name: 'TypeScript', url: 'https://www.typescriptlang.org' },
-        { name: 'Rust (Learning)', url: 'https://www.rust-lang.org' },
+        { name: 'Redux Toolkit', url: 'https://redux-toolkit.js.org/' },
+        { name: 'MUI / Shadcn/UI', url: 'https://mui.com/' },
+        { name: 'HTML5 / CSS3 / SASS', url: 'https://sass-lang.com/' },
+      ],
+    },
+    {
+      title: 'Architecture & Scalability',
+      icon: 'Terminal',
+      skills: [
+        { name: 'Micro-frontends', url: 'https://module-federation.io/' },
+        {
+          name: 'Shared Application Shells',
+          url: 'https://github.com/module-federation',
+        },
+        { name: 'Module Federation 2.0', url: 'https://module-federation.io' },
+        { name: 'Permission Systems', url: 'https://casl.js.org/' },
+        { name: 'Multi-Repo Management', url: 'https://pnpm.io/workspaces' },
+        { name: 'Configurable Dashboards', url: 'https://react.dev' },
+      ],
+    },
+    {
+      title: 'Build Systems & Quality',
+      icon: 'Wrench',
+      skills: [
+        { name: 'Rspack / Rsbuild', url: 'https://rspack.dev' },
+        { name: 'pnpm Workspaces', url: 'https://pnpm.io/' },
+        { name: 'Biome (Lint/Format)', url: 'https://biomejs.dev/' },
+        { name: 'Vitest / rstest', url: 'https://vitest.dev/' },
+        { name: 'Storybook', url: 'https://storybook.js.org' },
+        { name: 'Changesets', url: 'https://github.com/changesets/changesets' },
+      ],
+    },
+    {
+      title: 'Platform & Infrastructure',
+      icon: 'Database',
+      skills: [
+        { name: 'CI/CD (Jenkins)', url: 'https://www.jenkins.io/' },
+        { name: 'Docker / Containers', url: 'https://www.docker.com/' },
+        {
+          name: 'SonarQube (Static Analysis)',
+          url: 'https://www.sonarqube.org/',
+        },
+        {
+          name: 'Release Automation',
+          url: 'https://github.com/changesets/changesets',
+        },
+        { name: 'Node.js Backend', url: 'https://nodejs.org' },
+        { name: 'PostgreSQL / MongoDB', url: 'https://www.postgresql.org/' },
       ],
     },
   ],
@@ -129,8 +147,13 @@ export const portfolioData: PortfolioData = {
   contact: [
     {
       type: 'email',
-      label: 'barathraj.uidev@gmail.com',
+      label: 'Email',
       url: 'mailto:barathraj.uidev@gmail.com',
+    },
+    {
+      type: 'website',
+      label: 'Portfolio',
+      url: 'https://barathrajdevarajan.dev',
     },
     {
       type: 'github',
@@ -138,7 +161,7 @@ export const portfolioData: PortfolioData = {
       url: 'https://github.com/barathrajd',
     },
     {
-      type: 'website',
+      type: 'linkedin',
       label: 'LinkedIn',
       url: 'https://linkedin.com/in/barathrajd',
     },

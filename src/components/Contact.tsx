@@ -1,6 +1,12 @@
 import { Button } from '@/components/ui/button';
 import type { ContactLink } from '@/types/portfolio';
-import { SiGithub, SiGmail } from '@icons-pack/react-simple-icons';
+import {
+  FaEnvelope,
+  FaGithub,
+  FaGlobe,
+  FaLinkedin,
+  FaLink,
+} from 'react-icons/fa6';
 
 interface ContactProps {
   contact: ContactLink[];
@@ -10,11 +16,15 @@ export const Contact = ({ contact }: ContactProps) => {
   const getIcon = (type: string) => {
     switch (type) {
       case 'email':
-        return SiGmail;
+        return FaEnvelope;
       case 'github':
-        return SiGithub;
+        return FaGithub;
+      case 'linkedin':
+        return FaLinkedin;
+      case 'website':
+        return FaGlobe;
       default:
-        return SiGmail;
+        return FaLink;
     }
   };
 
@@ -29,7 +39,7 @@ export const Contact = ({ contact }: ContactProps) => {
             Open to frontend platform work, tooling projects, and collaboration
             on scalable React or Node.js systems.
           </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4 max-w-2xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
             {contact.map((link) => {
               const Icon = getIcon(link.type);
               return (
@@ -38,16 +48,18 @@ export const Contact = ({ contact }: ContactProps) => {
                   variant="outline"
                   size="lg"
                   asChild
-                  className="border-border bg-background hover:bg-secondary transition-colors"
+                  className="h-14 border-border/50 bg-secondary/30 hover:bg-secondary hover:border-primary/50 transition-all duration-300"
                 >
                   <a
                     href={link.url}
-                    target={link.type === 'github' ? '_blank' : undefined}
-                    rel={link.type === 'github' ? 'noreferrer' : undefined}
-                    className="flex items-center justify-center gap-2"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="flex items-center justify-center gap-3 w-full"
                   >
-                    <Icon className="h-5 w-5" />
-                    <span className="font-medium">{link.label}</span>
+                    <Icon className="h-5 w-5 text-primary opacity-80 group-hover:opacity-100" />
+                    <span className="font-semibold tracking-tight uppercase text-[10px] letter-spacing-[0.05em]">
+                      {link.label}
+                    </span>
                   </a>
                 </Button>
               );

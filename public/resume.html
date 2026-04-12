@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Barathraj D — Resume</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink: #18181A;
+    --ink-2: #46464A;
+    --ink-3: #8A8A90;
+    --rule: #DDDDD8;
+    --accent: #1D9E75;
+    --accent-dim: #0F6E56;
+    --page: #FAFAF7;
+  }
+
+  html { background: #E5E4DF; }
+
+  body {
+    font-family: 'DM Mono', monospace;
+    background: var(--page);
+    color: var(--ink);
+    font-size: 10.5px;
+    line-height: 1.65;
+    max-width: 840px;
+    margin: 32px auto;
+    padding: 52px 56px;
+    box-shadow: 0 2px 40px rgba(0,0,0,0.13);
+    position: relative;
+  }
+
+
+
+  /* HEADER */
+  .header {
+    padding-bottom: 18px;
+    border-bottom: 1.5px solid var(--ink);
+    margin-bottom: 0;
+  }
+
+  h1 {
+    font-family: 'DM Mono', monospace;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: -0.5px;
+  }
+
+  h1 em {
+    font-style: normal;
+    color: var(--accent);
+  }
+
+  .tagline {
+    font-size: 10px;
+    color: var(--ink-2);
+    letter-spacing: 0.03em;
+    margin-top: 8px;
+    max-width: 100%;
+    line-height: 1.5;
+    font-weight: 500;
+  }
+
+  .contact-line {
+    font-size: 9.5px;
+    color: var(--ink-3);
+    margin-top: 6px;
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .contact-line a { color: var(--accent-dim); text-decoration: none; }
+  .contact-line span { color: var(--rule); }  /* SECTION STYLING */
+  .section {
+    padding: 12px 0;
+    border-top: 0.5px solid var(--rule);
+  }
+
+  .section-label {
+    font-size: 9.5px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 8px;
+  }
+
+  /* ABOUT */
+  .about-list { list-style: none; }
+
+  .about-list li {
+    padding-left: 14px;
+    position: relative;
+    color: var(--ink-2);
+    margin-bottom: 3px;
+    font-size: 9.5px;
+    line-height: 1.5;
+  }
+
+  .about-list li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-size: 8px;
+    top: 0px;
+  }
+
+  /* EXPERIENCE */
+  .job { margin-bottom: 12px; }
+  .job:last-child { margin-bottom: 0; }
+
+  .job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 8px;
+    margin-bottom: 1px;
+  }
+
+  .job-role {
+    font-size: 10.5px;
+    font-weight: 500;
+  }
+
+  .job-period {
+    font-size: 8.5px;
+    color: var(--ink-3);
+    white-space: nowrap;
+  }
+
+  .job-company {
+    font-size: 9px;
+    color: var(--accent-dim);
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    margin-bottom: 4px;
+  }
+
+  .job-location { color: var(--ink-3); font-weight: 400; font-size: 8.5px; }
+
+  .job ul { list-style: none; }
+
+  .job ul li {
+    padding-left: 14px;
+    position: relative;
+    color: var(--ink-2);
+    margin-bottom: 2px;
+    font-size: 9px;
+  }
+
+  .job ul li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-size: 8px;
+    top: 2px;
+  }
+
+  /* SKILLS */
+  .skills-grid {
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     gap: 10px 24px;
+  }
+  .skill-group { margin-bottom: 0; }
+
+  .skill-category {
+    font-size: 8px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    margin-bottom: 4px;
+    font-weight: 500;
+  }
+
+  .chips { display: flex; flex-wrap: wrap; gap: 4px; }
+
+  .chip {
+    font-size: 8px;
+    padding: 1px 6px;
+    border: 0.5px solid var(--rule);
+    color: var(--ink-2);
+    border-radius: 2px;
+  }
+
+  /* PROJECTS */
+  .projects-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 24px;
+  }
+  .project { margin-bottom: 0; }
+
+  .project-title {
+    font-size: 10.5px;
+    font-weight: 500;
+    margin-bottom: 1px;
+  }
+
+  .project-title a {
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 0.5px solid var(--rule);
+  }
+
+  .project-short { color: var(--ink-2); margin-bottom: 2px; font-size: 9px; }
+
+  .project-long {
+    color: var(--ink-3);
+    font-size: 8.5px;
+    margin-bottom: 4px;
+    line-height: 1.5;
+  }
+
+  .tags { display: flex; flex-wrap: wrap; gap: 3px; }
+
+  .tag {
+    font-size: 8px;
+    padding: 0px 5px;
+    border: 0.50px solid var(--rule);
+    color: var(--ink-3);
+    border-radius: 2px;
+  }
+
+  /* EDUCATION */
+  .edu-grid {
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     gap: 12px 24px;
+  }
+  .edu { margin-bottom: 0; }
+
+  .edu-degree {
+    font-size: 10.5px;
+    font-weight: 500;
+  }
+
+  .edu-meta { font-size: 9px; color: var(--ink-3); margin-top: 1px; }
+
+  @media print {
+    html { background: white; }
+    body { 
+      margin: 0; 
+      padding: 0.4in 0.5in; 
+      box-shadow: none; 
+      max-width: 100%;
+      font-size: 9.5px;
+    }
+    .header { padding-bottom: 12px; border-bottom: 1.5px solid var(--ink); }
+    h1 { font-size: 24px; }
+    .section { padding: 10px 0; break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+
+
+
+<header class="header">
+  <h1>Barathraj <em>D</em></h1>
+  <p class="tagline">Frontend Architect & Developer with 4+ years of experience building scalable enterprise platforms and micro-frontend systems.</p>
+  <div class="contact-line">
+    <a href="mailto:barathraj.uidev@gmail.com" target="_blank">barathraj.uidev@gmail.com</a>
+    <span>/</span>
+    <a href="https://barathrajdevarajan.dev" target="_blank">barathrajdevarajan.dev</a>
+    <span>/</span>
+    <a href="https://github.com/barathrajd" target="_blank">GitHub</a>
+    <span>/</span>
+    <a href="https://linkedin.com/in/barathrajd" target="_blank">LinkedIn</a>
+    <span>/</span>
+    Bengaluru, Karnataka, India
+  </div>
+</header>
+
+<main>
+
+  <!-- ABOUT -->
+  <section class="section">
+    <h2 class="section-label">About</h2>
+    <ul class="about-list">
+      <li>Architected and maintained React-based frontend applications, focusing on shared shell architecture, micro-frontend integration, and reusable UI foundations.</li>
+      <li>Led enterprise-wide frontend modernization by migrating legacy systems to Rspack, pnpm, Biome, and rstest, significantly improving build speeds and developer experience.</li>
+      <li>Designed and refined shared navigation systems, permission-aware routing, and command/search interactions for complex multi-module platforms.</li>
+      <li>Expertise in Micro-frontends (Module Federation 2.0), Redux Toolkit, and MUI, with a strong focus on platform consistency and shared dependency management.</li>
+    </ul>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="section">
+    <h2 class="section-label">Experience</h2>
+    <div>
+    
+    <div class="job">
+      <div class="job-header">
+        <span class="job-role">Frontend Developer</span>
+        <span class="job-period">June 2021 - Present</span>
+      </div>
+      <div class="job-company">Affinsys AI (BankBuddy.ai, TelcoBuddy.ai) <span class="job-location">· Bengaluru, Karnataka, India</span></div>
+      <ul>
+        <li>Architected and managed React-based frontend repositories using Micro-frontend architecture (Module Federation 2.0) and shared application shells.</li>
+        <li>Led the modernization of the entire frontend stack, migrating from legacy builds to Rspack, pnpm, Biome, and rstest, resulting in faster builds and improved DX.</li>
+        <li>Built several enterprise-grade systems including a Shared Application Shell, User & Access Administration, Reporting & Insights Dashboard, and a Visual Flow Builder.</li>
+        <li>Developed a highly configurable Conversational Interface System with real-time messaging, file handling, and customizable UI/theme support.</li>
+        <li>Created and maintained a comprehensive Shared UI Library and Tooling platform, standardizing components (tables, alerts, forms) and release automation workflows across teams.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-header">
+        <span class="job-role">Spotknack Talent Community | Frontend Developer</span>
+        <span class="job-period">February 2021 - May 2021</span>
+      </div>
+      <div class="job-company">Spotknack - Mission 2021 </div>
+      <ul>
+        <li>Worked as a Frontend Developer for the Spotknack Talent Community.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-header">
+        <span class="job-role">Graduate Innovation Engineer</span>
+        <span class="job-period">February 2020 - October 2020</span>
+      </div>
+      <div class="job-company">FORGE Accelerator <span class="job-location">· Coimbatore Area, India</span></div>
+      <ul>
+        <li>The Innovation/Startup fellowship program, ProtoSem is a 20-week, full-semester course, during which students are nurtured & guided to develop core technical concepts and key engineering skills and are transformed into 'Innovation Engineers'.</li>
+        <li>We work as a team with students from different engineering/technical/science streams, towards designing, developing and testing an innovative tech-enabled solution to solve a real-world problem sponsored by the industry, government, or social sector, etc.</li>
+        <li>We are guided to solve real-world challenges using the tools enabled by hardware, software, and computing technologies, and to evolve as Graduate Innovation Engineers and fully rounded professionals.</li>
+        <li>We gain skills and competencies to transform ourselves into creative problem-solvers, capable of building deployable/usable prototypes, selecting and applying technology to create cost-effective solutions.</li>
+        <li>We innovate and design solutions by setting and achieving metrics in customer development & discovery, value-proposition validation, market definition & sizing, customer acquisition, revenue model & competition analysis.</li>
+      </ul>
+    </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="section">
+    <h2 class="section-label">Technical Stack</h2>
+    <div class="skills-grid">
+      
+      <div class="skill-group">
+        <div class="skill-category">Frontend Core & Frameworks</div>
+        <div class="chips">
+          <span class="chip">React.js</span>
+        <span class="chip">TypeScript</span>
+        <span class="chip">JavaScript (ES6+)</span>
+        <span class="chip">Redux Toolkit</span>
+        <span class="chip">MUI / Shadcn/UI</span>
+        <span class="chip">HTML5 / CSS3 / SASS</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-category">Architecture & Scalability</div>
+        <div class="chips">
+          <span class="chip">Micro-frontends</span>
+        <span class="chip">Shared Application Shells</span>
+        <span class="chip">Module Federation 2.0</span>
+        <span class="chip">Permission Systems</span>
+        <span class="chip">Multi-Repo Management</span>
+        <span class="chip">Configurable Dashboards</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-category">Build Systems & Quality</div>
+        <div class="chips">
+          <span class="chip">Rspack / Rsbuild</span>
+        <span class="chip">pnpm Workspaces</span>
+        <span class="chip">Biome (Lint/Format)</span>
+        <span class="chip">Vitest / rstest</span>
+        <span class="chip">Storybook</span>
+        <span class="chip">Changesets</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-category">Platform & Infrastructure</div>
+        <div class="chips">
+          <span class="chip">CI/CD (Jenkins)</span>
+        <span class="chip">Docker / Containers</span>
+        <span class="chip">SonarQube (Static Analysis)</span>
+        <span class="chip">Release Automation</span>
+        <span class="chip">Node.js Backend</span>
+        <span class="chip">PostgreSQL / MongoDB</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section">
+    <h2 class="section-label">Projects</h2>
+    <div class="projects-grid">
+      
+      <div class="project">
+        <div class="project-title">
+          <a href="https://github.com/barathrajd/booksmanagementsystem" target="_blank">Books Management System</a>
+        </div>
+        <div class="project-short">A platform to sell, buy, and request books.</div>
+        <div class="project-long">Built to support book exchange workflows with user-focused interactions. Includes core management capabilities and planned chat features for richer buyer and requester communication.</div>
+        <div class="tags">
+          <span class="tag">JavaScript</span>
+        <span class="tag">Node.js</span>
+        <span class="tag">MongoDB</span>
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="project-title">
+          <a href="https://github.com/Evema-event/EveMa" target="_blank">EveMa</a>
+        </div>
+        <div class="project-short">Event data acquisition and communication platform.</div>
+        <div class="project-long">Software for event workflows that enables visitor and exhibitor communication, profile-based analytics, and follow-up optimization to convert high-intent leads into business outcomes.</div>
+        <div class="tags">
+          <span class="tag">React</span>
+        <span class="tag">Node.js</span>
+        <span class="tag">Express</span>
+        <span class="tag">Data Analytics</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section class="section">
+    <h2 class="section-label">Education</h2>
+    <div class="edu-grid">
+      
+      <div class="edu">
+        <div class="edu-degree">Bachelor of Engineering, ECE</div>
+        <div class="edu-meta">Kumaraguru College of Technology · 2017 - 2021</div>
+      </div>
+
+      <div class="edu">
+        <div class="edu-degree">High School</div>
+        <div class="edu-meta">Tagore Matric Higher Secondary School · 2011 - 2017</div>
+      </div>
+    </div>
+  </section>
+
+</main>
+</body>
+</html>

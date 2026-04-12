@@ -75,10 +75,30 @@ export const Hero = ({ personal }: HeroProps) => {
               variant="outline"
               size="lg"
               className="min-w-[190px] border-border bg-background hover:bg-secondary"
+              onClick={() => {
+                window.open('/resume.html', '_blank');
+              }}
+            >
+              View Resume
+            </Button>
+            <Button
+              variant="outline"
+              size="lg"
+              className="min-w-[190px] border-border bg-background hover:bg-secondary"
+              asChild
+            >
+              <a href="/resume.pdf" download="Barathraj_D_Resume.pdf">
+                Download Resume
+              </a>
+            </Button>
+            <Button
+              variant="ghost"
+              size="lg"
+              className="min-w-[190px] text-muted-foreground hover:text-foreground"
               onClick={() => scrollToSection('contact')}
             >
               <FaEnvelope className="mr-2 h-4 w-4" />
-              Contact Me
+              Contact
             </Button>
           </div>
         </div>

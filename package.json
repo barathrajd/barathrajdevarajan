@@ -4,11 +4,13 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "rsbuild build",
+    "build": "pnpm generate:resume && rsbuild build",
     "check": "biome check --write",
-    "dev": "rsbuild dev --open",
+    "dev": "concurrently \"pnpm watch:resume\" \"rsbuild dev --open\"",
     "format": "biome format --write",
     "preview": "rsbuild preview",
+    "generate:resume": "tsx scripts/generate-resume.ts",
+    "watch:resume": "tsx watch scripts/generate-resume.ts",
     "lighthouse:reports": "node scripts/run-lighthouse-reports.mjs"
   },
   "dependencies": {
@@ -17,6 +19,7 @@
     "@icons-pack/react-simple-icons": "13.11.2",
     "@radix-ui/react-separator": "^1.1.8",
     "@radix-ui/react-slot": "^1.2.4",
+    "@types/node": "^24.12.2",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "react": "19.2.4",
@@ -33,10 +36,13 @@
     "@types/react-dom": "19.2.3",
     "autoprefixer": "^10.4.22",
     "baseline-browser-mapping": "2.10.0",
+    "concurrently": "^9.2.1",
     "postcss": "^8.5.6",
+    "puppeteer": "^24.40.0",
     "react-doctor": "0.0.29",
     "tailwindcss": "3.4.17",
     "tailwindcss-animate": "^1.0.7",
+    "tsx": "^4.21.0",
     "typescript": "^5.8.3"
   },
   "packageManager": "pnpm@10.30.3+sha512.c961d1e0a2d8e354ecaa5166b822516668b7f44cb5bd95122d590dd81922f606f5473b6d23ec4a5be05e7fcd18e8488d47d978bbe981872f1145d06e9a740017"

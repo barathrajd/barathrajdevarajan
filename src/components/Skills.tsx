@@ -7,7 +7,7 @@ interface SkillsProps {
   skills: SkillCategory[];
 }
 
-const iconMap: Record<string, IconType> = {
+const iconMap:Record<string, IconType> = {
   Code2: FaCode,
   Database: FaDatabase,
   Terminal: FaTerminal,

@@ -109,6 +109,14 @@ export const Navbar = () => {
           >
             Projects
           </button>
+          <a
+            href="/resume.html"
+            target="_blank"
+            rel="noreferrer"
+            className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
+          >
+            Resume
+          </a>
           <button
             type="button"
             onClick={() => handleNavClick('contact')}
@@ -220,6 +228,15 @@ export const Navbar = () => {
             >
               Projects
             </button>
+            <a
+              href="/resume.html"
+              target="_blank"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="text-left py-3 px-4 rounded-md hover:bg-secondary transition-colors font-medium"
+              rel="noreferrer"
+            >
+              Resume
+            </a>
             <button
               type="button"
               onClick={() => handleNavClick('contact')}
